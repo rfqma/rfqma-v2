@@ -259,7 +259,7 @@ export default function HeroHome() {
             alignItems={'center'}
             justifyContent={'center'}
             h={'100%'}
-            gap={20}
+            gap={16}
             flexDirection={'column'}
         >
 
@@ -399,11 +399,12 @@ export default function HeroHome() {
                 bg={cardBgColor}
                 borderRadius={'xl'}
                 boxShadow={'2xl'}
-                pr={'36'}
             >
                 <Flex
                     flexDirection={'column'}
                     gap={3}
+                    alignItems={'center'}
+                    textAlign={'center'}
                 >
                     <Flex
                         flexDirection={'column'}
@@ -421,7 +422,7 @@ export default function HeroHome() {
                             color={textColor}
                             fontSize={'0.9rem'}
                         >
-                            a 20yo Minimalist. Digital Native, Photography and Videography Enthusiast. <br />
+                            I'm a 20yo Minimalist. Digital Native, Photography and Videography Enthusiast. <br />
                             Undergraduate student majoring on Computer Engineering.
                         </Text>
                     </Flex>
@@ -429,6 +430,8 @@ export default function HeroHome() {
                         flexDirection={'column'}
                         gap={1}
                         mt={5}
+                        textAlign={'center'}
+                        alignItems={'center'}
                     >
                         <Link href={EXTERNAL_LINKS.MAP}>
                             <Flex
