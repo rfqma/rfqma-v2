@@ -15,10 +15,10 @@ export default function HomePage() {
                 bg={bg}
                 w={'100%'}
                 maxW={'unset'}
-                h={'130vh'}
             >
                 <Container
                     maxW={1200}
+                    pb={40}
                 >
                     <Works />
                 </Container>
