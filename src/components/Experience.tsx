@@ -41,7 +41,7 @@ export default function Experience() {
             maxW={'unset'}
         >
             <Container
-                maxW={1200}
+                maxW={768}
                 pt={'40'}
             >
                 <Flex
@@ -60,8 +60,8 @@ export default function Experience() {
                 </Flex>
 
                 <Flex
-                    alignItems={'center'}
-                    justifyContent={'center'}
+                    flexDirection={'column'}
+                    gap={10}
                     h={'100%'}
                     pt={10}
                 >
@@ -78,9 +78,11 @@ export default function Experience() {
                                     bg={cardBgColor}
                                     borderRadius={'2xl'}
                                     boxShadow={'2xl'}
+
                                 >
                                     <Flex
                                         gap={5}
+                                        justifyContent={'space-between'}
                                     >
                                         <Flex
                                             pr={5}
@@ -94,12 +96,14 @@ export default function Experience() {
                                                 }
                                                 alt={experience.logoAlt}
                                                 verticalAlign={'top'}
+                                                maxWidth={45}
                                             />
                                         </Flex>
                                         <Flex
                                             flexDirection={'column'}
                                             gap={5}
                                             maxW={'lg'}
+                                            flex={1}
                                         >
                                             <Flex
                                                 flexDirection={'column'}
@@ -216,6 +220,8 @@ export default function Experience() {
                 <Flex
                     h={'100%'}
                     pt={10}
+                    flexDirection={'column'}
+                    gap={10}
                 >
                     {
                         EXPERIENCES.map((experience, index) => {
@@ -246,7 +252,7 @@ export default function Experience() {
                                                 }
                                                 alt={experience.logoAlt}
                                                 verticalAlign={'top'}
-                                                width={150}
+                                                maxWidth={45}
                                             />
                                         </Flex>
                                         <Flex

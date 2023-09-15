@@ -175,6 +175,21 @@ export const EXPERIENCES: ExperienceDetails[] = [
     {
         logo: LogoNextJs,
         darkModeLogo: LogoNextJs,
+        logoAlt: 'Test logo',
+        name: 'Test Company',
+        position: 'Test Position',
+        startDate: new Date(2020, 11),
+        currentlyWorkHere: true,
+        endDate: new Date(2021, 10),
+        summary: [
+            'Test Summary 1.',
+            'Test Summary 2.',
+            'Test Summary 3.'
+        ],
+    },
+    {
+        logo: LogoNextJs,
+        darkModeLogo: LogoNextJs,
         logoAlt: 'Mora Studio logo',
         name: 'Mora Studio',
         position: 'Freelance Photographer & Videographer',
@@ -186,7 +201,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
             'Documenting photos and videos during the event.',
             'The studio mostly documenting chinese indonesians wedding and engagement style, also a lot of pre-wedding concept.'
         ],
-    }
+    },
 ]
 
 export const WORKS: WorksDetails[] = [
