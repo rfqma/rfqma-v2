@@ -52,7 +52,7 @@ export default function Works() {
                         fontSize={'1.1rem'}
                         color={cardPrimaryTextColor}
                     >
-                        👷 Some of the projects i've worked before:
+                        👷 Some of the projects i&apos;ve worked before:
                     </Text>
                 </Flex>
 
@@ -196,7 +196,7 @@ export default function Works() {
                         fontSize={'1rem'}
                         color={textColor}
                     >
-                        👷 Some of the projects i've worked before:
+                        👷 Some of the projects i&apos;ve worked before:
                     </Text>
                 </Flex>
 

@@ -79,7 +79,7 @@ export default function HeroAbout() {
                                 color={textColor}
                                 fontSize={'0.9rem'}
                             >
-                                I’m a 20 years old who passionate about photography, videography, and informatics,
+                                I&apos;m a 20 years old who passionate about photography, videography, and informatics,
                                 I am an ambitious student pursuing a degree in informatics at Universitas Pembangunan Nasional Veteran Yogyakarta.
                             </Text>
                             <Text
@@ -99,7 +99,7 @@ export default function HeroAbout() {
                             >
                                 Combining my passion for technology and the arts,
                                 I am dedicated to delivering exceptional visual content that resonates with audiences.
-                                Let's connect and explore the power of visuals together.
+                                Let&apos;s connect and explore the power of visuals together.
                             </Text>
                         </Flex>
                     </Flex>
@@ -173,7 +173,7 @@ export default function HeroAbout() {
                                 color={textColor}
                                 fontSize={'0.9rem'}
                             >
-                                I’m a 20 years old who passionate about photography, videography, and informatics,
+                                I&apos;m a 20 years old who passionate about photography, videography, and informatics,
                                 I am an ambitious student pursuing a degree in informatics at Universitas Pembangunan Nasional Veteran Yogyakarta.
                             </Text>
                             <Text
@@ -193,7 +193,7 @@ export default function HeroAbout() {
                             >
                                 Combining my passion for technology and the arts,
                                 I am dedicated to delivering exceptional visual content that resonates with audiences.
-                                Let's connect and explore the power of visuals together.
+                                Let&apos;s connect and explore the power of visuals together.
                             </Text>
                         </Flex>
                     </Flex>

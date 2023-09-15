@@ -70,14 +70,14 @@ export default function HeroHome() {
                             color={titleColor}
                             fontSize={'3rem'}
                         >
-                            Hi, I'm Rifqi
+                            Hi, I&apos;m Rifqi
                         </Text>
                         <Text
                             fontWeight={'normal'}
                             color={textColor}
                             fontSize={'0.9rem'}
                         >
-                            a 20yo Minimalist. Digital Native, Photography and Videography Enthusiast. <br />
+                            I&apos;m a 20yo Minimalist. Digital Native, Photography and Videography Enthusiast. <br />
                             Undergraduate student majoring on Computer Engineering.
                         </Text>
                     </Flex>
@@ -415,14 +415,14 @@ export default function HeroHome() {
                             color={titleColor}
                             fontSize={'2.5rem'}
                         >
-                            Hi, I'm Rifqi
+                            Hi, I&apos;m Rifqi
                         </Text>
                         <Text
                             fontWeight={'normal'}
                             color={textColor}
                             fontSize={'0.9rem'}
                         >
-                            I'm a 20yo Minimalist. Digital Native, Photography and Videography Enthusiast. <br />
+                            I&apos;m a 20yo Minimalist. Digital Native, Photography and Videography Enthusiast. <br />
                             Undergraduate student majoring on Computer Engineering.
                         </Text>
                     </Flex>
