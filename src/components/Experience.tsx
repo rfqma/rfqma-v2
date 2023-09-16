@@ -238,23 +238,19 @@ export default function Experience() {
                                     boxShadow={'2xl'}
                                 >
                                     <Flex
-                                        gap={3}
+                                        flexDirection={'column'}
+                                        gap={5}
                                     >
-                                        <Flex
-                                            pr={5}
-                                            flexDirection={'column'}
-                                        >
-                                            <Image
-                                                src={
-                                                    typeof experienceLogo === 'string'
-                                                        ? experienceLogo
-                                                        : staticImageToDataURL(experienceLogo as StaticImageData)
-                                                }
-                                                alt={experience.logoAlt}
-                                                verticalAlign={'top'}
-                                                maxWidth={45}
-                                            />
-                                        </Flex>
+                                        <Image
+                                            src={
+                                                typeof experienceLogo === 'string'
+                                                    ? experienceLogo
+                                                    : staticImageToDataURL(experienceLogo as StaticImageData)
+                                            }
+                                            alt={experience.logoAlt}
+                                            verticalAlign={'top'}
+                                            maxWidth={45}
+                                        />
                                         <Flex
                                             flexDirection={'column'}
                                             gap={5}
