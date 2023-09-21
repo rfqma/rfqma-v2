@@ -16,6 +16,7 @@ export default function HomePage() {
         bg={bg}
         w={'100%'}
         maxW={'unset'}
+        minHeight={'calc(100vh)'}
       >
         <Container
           maxW={1200}

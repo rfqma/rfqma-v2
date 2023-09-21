@@ -23,7 +23,7 @@ export default function NotFound404Page() {
                 bg={bg}
                 w={'100%'}
                 maxW={'unset'}
-                h={'100vh'}
+                minHeight={'calc(100vh)'}
             >
                 <Flex
                     alignItems={'center'}

@@ -24,8 +24,9 @@ export default function Footer() {
             bg={bg}
             w={'100%'}
             maxW={'unset'}
-            position={'sticky'}
-            top={0}
+            position={'fixed'}
+            left={0}
+            bottom={0}
             zIndex={2}
         >
             <Flex
