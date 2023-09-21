@@ -175,21 +175,6 @@ export const EXPERIENCES: ExperienceDetails[] = [
     {
         logo: LogoNextJs,
         darkModeLogo: LogoNextJs,
-        logoAlt: 'Test logo',
-        name: 'Test Company',
-        position: 'Test Position',
-        startDate: new Date(2020, 11),
-        currentlyWorkHere: true,
-        endDate: new Date(2021, 10),
-        summary: [
-            'Test Summary 1.',
-            'Test Summary 2.',
-            'Test Summary 3.'
-        ],
-    },
-    {
-        logo: LogoNextJs,
-        darkModeLogo: LogoNextJs,
         logoAlt: 'Mora Studio logo',
         name: 'Mora Studio',
         position: 'Freelance Photographer & Videographer',
@@ -213,24 +198,6 @@ export const WORKS: WorksDetails[] = [
         previewImage: RZBarbershopPreview,
         technologies: [
             'Premiere Pro',
-        ],
-    },
-    {
-        name: 'Test',
-        description:
-            'Test',
-        url: 'https://www.youtube.com/watch?v=KdqK7SruAT0',
-        previewImage: RZBarbershopPreview,
-        technologies: [
-            'Premiere Pro',
-            'After Effects',
-            'React',
-            'Next.js',
-            'Node.js',
-            'Express.js',
-            'Express.js',
-            'Express.js',
-            'Express.js',
         ],
     },
 ]
