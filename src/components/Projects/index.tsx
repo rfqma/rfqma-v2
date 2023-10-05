@@ -189,11 +189,13 @@ export default function Works() {
                 <Flex
                     display={'flex'}
                     flexDirection={'column'}
+                    alignItems={'center'}
+                    textAlign={'center'}
                     gap={4}
                 >
                     <Text
                         fontWeight={'normal'}
-                        fontSize={'1rem'}
+                        fontSize={'1.1rem'}
                         color={textColor}
                     >
                         👷 Some of the projects i&apos;ve worked before:
