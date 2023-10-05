@@ -50,7 +50,7 @@ export default function Tech() {
                     </Text>
                 </Flex>
                 <Grid
-                    templateColumns={'repeat(5, minmax(0, 1fr))'}
+                    templateColumns={'repeat(4, minmax(0, 1fr))'}
                     rowGap={12}
                     mt={10}
                 >
