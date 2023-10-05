@@ -85,12 +85,12 @@ export const techStacks: TechStack[] = [
         darkModeLogo: LogoPremierePro,
         url: 'https://www.adobe.com/id_id/products/premiere.html'
     },
-    {
-        label: 'Lightroom Classic',
-        logo: LogoLightroomClassic,
-        darkModeLogo: LogoLightroomClassic,
-        url: 'https://www.adobe.com/id_id/products/photoshop-lightroom-classic.html'
-    },
+    // {
+    //     label: 'Lightroom Classic',
+    //     logo: LogoLightroomClassic,
+    //     darkModeLogo: LogoLightroomClassic,
+    //     url: 'https://www.adobe.com/id_id/products/photoshop-lightroom-classic.html'
+    // },
     // {
     //     label: 'Figma',
     //     logo: LogoFigma,
@@ -109,24 +109,24 @@ export const techStacks: TechStack[] = [
     //     darkModeLogo: LogoCPP,
     //     url: 'https://cplusplus.com/'
     // },
-    {
-        label: 'HTML',
-        logo: LogoHTML,
-        darkModeLogo: LogoHTML,
-        url: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
-    },
+    // {
+    //     label: 'HTML',
+    //     logo: LogoHTML,
+    //     darkModeLogo: LogoHTML,
+    //     url: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
+    // },
     {
         label: 'Javascript',
         logo: LogoJavascript,
         darkModeLogo: LogoJavascript,
         url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
     },
-    {
-        label: 'CSS',
-        logo: LogoCSS,
-        darkModeLogo: LogoCSS,
-        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
-    },
+    // {
+    //     label: 'CSS',
+    //     logo: LogoCSS,
+    //     darkModeLogo: LogoCSS,
+    //     url: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
+    // },
     {
         label: 'Tailwind CSS',
         logo: LogoTailwindCSS,
