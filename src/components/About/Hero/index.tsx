@@ -79,8 +79,8 @@ export default function Hero() {
                                 color={textColor}
                                 fontSize={'0.9rem'}
                             >
-                                I&apos;m a 20 years old who passionate about photography, videography, and informatics,
-                                I am an ambitious student pursuing a degree in informatics at Universitas Pembangunan Nasional Veteran Yogyakarta.
+                                I&apos;m a 20 years old who passionate about photography, videography, and computer related stuff.
+                                I am an ambitious student pursuing a degree on informatics at Universitas Pembangunan Nasional Veteran Yogyakarta.
                             </Text>
                             <Text
                                 fontWeight={'normal'}
@@ -173,7 +173,7 @@ export default function Hero() {
                                 color={textColor}
                                 fontSize={'0.9rem'}
                             >
-                                I&apos;m a 20 years old who passionate about photography, videography, and informatics,
+                                I&apos;m a 20 years old who passionate about photography, videography, and computer related stuff.
                                 I am an ambitious student pursuing a degree in informatics at Universitas Pembangunan Nasional Veteran Yogyakarta.
                             </Text>
                             <Text

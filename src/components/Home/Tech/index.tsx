@@ -46,7 +46,7 @@ export default function Tech() {
                         fontSize={'1.1rem'}
                         color={textColor}
                     >
-                        ⛏️ The tools and techStacks I usually use:
+                        ⛏️ The tools and technologies I usually use:
                     </Text>
                 </Flex>
                 <Grid
@@ -122,7 +122,7 @@ export default function Tech() {
                         fontSize={'1rem'}
                         color={textColor}
                     >
-                        🔨 The tools and techStacks I usually use:
+                        🔨 The tools and technologies I usually use:
                     </Text>
                 </Flex>
                 <Grid

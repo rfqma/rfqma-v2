@@ -77,8 +77,8 @@ export default function Hero() {
                             color={textColor}
                             fontSize={'0.9rem'}
                         >
-                            I&apos;m a 20yo Minimalist. Digital Native, Photography and Videography Enthusiast. <br />
-                            Undergraduate student majoring on Computer Engineering.
+                            I&apos;m a 20yo Minimalist, Digital Native, Photography and Videography Enthusiast. <br />
+                            Undergraduate student majoring on Informatics.
                         </Text>
                     </Flex>
                     <Flex
@@ -422,8 +422,8 @@ export default function Hero() {
                             color={textColor}
                             fontSize={'0.9rem'}
                         >
-                            I&apos;m a 20yo Minimalist. Digital Native, Photography and Videography Enthusiast. <br />
-                            Undergraduate student majoring on Computer Engineering.
+                            I&apos;m a 20yo Minimalist, Digital Native, Photography and Videography Enthusiast. <br />
+                            Undergraduate student majoring on Informatics.
                         </Text>
                     </Flex>
                     <Flex
