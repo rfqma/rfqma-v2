@@ -10,7 +10,7 @@ import {
     useColorMode,
     useMediaQuery,
 } from '@chakra-ui/react'
-import { TECHNOLOGIES } from "@/lib/datas"
+import { techStacks } from "@/lib/utilities/data"
 import { StaticImageData } from 'next/image';
 
 export default function Tech() {
@@ -46,7 +46,7 @@ export default function Tech() {
                         fontSize={'1.1rem'}
                         color={textColor}
                     >
-                        ⛏️ The tools and technologies I usually use:
+                        ⛏️ The tools and techStacks I usually use:
                     </Text>
                 </Flex>
                 <Grid
@@ -55,7 +55,7 @@ export default function Tech() {
                     mt={10}
                 >
                     {
-                        TECHNOLOGIES.map((tech, index) => {
+                        techStacks.map((tech, index) => {
                             const logoCondition =
                                 colorMode === 'light' ? tech.logo : tech.darkModeLogo
                             const techLogo = logoCondition
@@ -122,7 +122,7 @@ export default function Tech() {
                         fontSize={'1rem'}
                         color={textColor}
                     >
-                        🔨 The tools and technologies I usually use:
+                        🔨 The tools and techStacks I usually use:
                     </Text>
                 </Flex>
                 <Grid
@@ -131,7 +131,7 @@ export default function Tech() {
                     mt={10}
                 >
                     {
-                        TECHNOLOGIES.map((tech, index) => {
+                        techStacks.map((tech, index) => {
                             const logoCondition =
                                 colorMode === 'light' ? tech.logo : tech.darkModeLogo
                             const techLogo = logoCondition

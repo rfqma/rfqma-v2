@@ -4,7 +4,7 @@ import {
     Container,
     useColorModeValue,
 } from '@chakra-ui/react'
-import Works from '@/components/Works'
+import Works from '@/components/Projects'
 
 export default function HomePage() {
     const bg = useColorModeValue('white', 'gray.950')

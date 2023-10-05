@@ -4,8 +4,8 @@ import {
   Container,
   useColorModeValue,
 } from '@chakra-ui/react'
-import HeroHome from '@/components/HeroHome'
-import Tech from '@/components/Tech'
+import Hero from '@/components/Home/Hero'
+import Tech from '@/components/Home/Tech'
 
 export default function HomePage() {
   const bg = useColorModeValue('white', 'gray.950')
@@ -22,7 +22,7 @@ export default function HomePage() {
           maxW={1200}
           py={40}
         >
-          <HeroHome />
+          <Hero />
           <Tech />
         </Container>
       </Container >

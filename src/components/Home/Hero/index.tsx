@@ -13,11 +13,11 @@ import {
 import { HiLocationMarker } from 'react-icons/hi'
 import { GoDotFill } from 'react-icons/go'
 import { AiFillEye, AiFillCopy } from 'react-icons/ai'
-import Social from '@/components/Social'
-import { EXTERNAL_LINKS } from '@/lib/datas'
-import { copyTextToClipboard } from '@/lib/utils'
+import Social from '@/components/Socials'
+import { externalLinks } from '@/lib/utilities/data'
+import { copyTextToClipboard } from '@/lib/utilities/copyTextToClipboard'
 
-export default function HeroHome() {
+export default function Hero() {
     const iconColor = useColorModeValue('gray.600', 'gray.400')
     const textColor = useColorModeValue('gray.600', 'gray.300')
     const titleColor = useColorModeValue('gray.900', 'gray.300')
@@ -86,7 +86,7 @@ export default function HeroHome() {
                         gap={1}
                         mt={5}
                     >
-                        <Link href={EXTERNAL_LINKS.MAP}>
+                        <Link href={externalLinks.MAP}>
                             <Flex
                                 gap={2}
                             >
@@ -159,14 +159,14 @@ export default function HeroHome() {
                             gap={2}
                             alignItems={'center'}
                         >
-                            <Link href={EXTERNAL_LINKS.MAILTO}>
+                            <Link href={externalLinks.MAILTO}>
                                 <Text
                                     textAlign={'center'}
                                     fontWeight={'semibold'}
                                     color={textColor}
                                     fontSize={'0.9rem'}
                                 >
-                                    {EXTERNAL_LINKS.EMAIL}
+                                    {externalLinks.EMAIL}
                                 </Text>
                             </Link>
                             <Icon
@@ -174,7 +174,7 @@ export default function HeroHome() {
                                 boxSize={4}
                                 color={iconColor}
                                 cursor={'pointer'}
-                                onClick={() => handleCopyText(EXTERNAL_LINKS.EMAIL, 'email')}
+                                onClick={() => handleCopyText(externalLinks.EMAIL, 'email')}
                             />
                         </Flex>
                     </Flex>
@@ -219,7 +219,7 @@ export default function HeroHome() {
                             >
                                 Curriculum Vitae
                             </Text>
-                            <Link href={EXTERNAL_LINKS.CV}>
+                            <Link href={externalLinks.CV}>
                                 <Box
                                     as='button'
                                     transition='all 0.2s cubic-bezier(.08,.52,.52,1)'
@@ -301,14 +301,14 @@ export default function HeroHome() {
                             gap={2}
                             alignItems={'center'}
                         >
-                            <Link href={EXTERNAL_LINKS.MAILTO}>
+                            <Link href={externalLinks.MAILTO}>
                                 <Text
                                     textAlign={'center'}
                                     fontWeight={'semibold'}
                                     color={textColor}
                                     fontSize={'0.9rem'}
                                 >
-                                    {EXTERNAL_LINKS.EMAIL}
+                                    {externalLinks.EMAIL}
                                 </Text>
                             </Link>
                             <Icon
@@ -316,7 +316,7 @@ export default function HeroHome() {
                                 boxSize={4}
                                 color={iconColor}
                                 cursor={'pointer'}
-                                onClick={() => handleCopyText(EXTERNAL_LINKS.EMAIL, 'email')}
+                                onClick={() => handleCopyText(externalLinks.EMAIL, 'email')}
                             />
                         </Flex>
                     </Flex>
@@ -361,7 +361,7 @@ export default function HeroHome() {
                             >
                                 Curriculum Vitae
                             </Text>
-                            <Link href={EXTERNAL_LINKS.CV}>
+                            <Link href={externalLinks.CV}>
                                 <Box
                                     as='button'
                                     transition='all 0.2s cubic-bezier(.08,.52,.52,1)'
@@ -433,7 +433,7 @@ export default function HeroHome() {
                         textAlign={'center'}
                         alignItems={'center'}
                     >
-                        <Link href={EXTERNAL_LINKS.MAP}>
+                        <Link href={externalLinks.MAP}>
                             <Flex
                                 gap={2}
                             >

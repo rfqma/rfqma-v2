@@ -10,7 +10,7 @@ import {
     ListItem,
     useMediaQuery
 } from '@chakra-ui/react'
-import { EXPERIENCES } from "@/lib/datas"
+import { experiences } from "@/lib/utilities/data"
 import { StaticImageData } from 'next/image';
 
 export default function Experience() {
@@ -66,7 +66,7 @@ export default function Experience() {
                     pt={10}
                 >
                     {
-                        EXPERIENCES.map((experience, index) => {
+                        experiences.map((experience, index) => {
                             const logoCondition =
                                 colorMode === 'light' ? experience.logo : experience.darkModeLogo
                             const experienceLogo = logoCondition
@@ -224,7 +224,7 @@ export default function Experience() {
                     gap={10}
                 >
                     {
-                        EXPERIENCES.map((experience, index) => {
+                        experiences.map((experience, index) => {
                             const logoCondition =
                                 colorMode === 'light' ? experience.logo : experience.darkModeLogo
                             const experienceLogo = logoCondition

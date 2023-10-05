@@ -18,15 +18,17 @@ import LogoCSS from '/public/images/logos/logo-css.svg'
 import { AiFillGithub, AiFillInstagram, AiFillYoutube, AiFillLinkedin } from 'react-icons/ai'
 import { SiPexels } from 'react-icons/si'
 
-import RZBarbershopPreview from '/public/images/works/work-rzbarbershopteaser.jpg'
+import RZBarbershopPreview from '/public/images/projects/work-rzbarbershopteaser.jpg'
 
 import {
-    TechDetails,
-    ExperienceDetails,
-    WorksDetails
-} from '@/lib/types'
+    TechStack,
+    Experience,
+    Project,
+    HeaderMenuItem,
+    ExternalLink,
+} from '@/lib/utilities/types'
 
-export const SOCIAL_LINKS = [
+export const socialLinks = [
     {
         name: 'Pexels',
         icon: SiPexels,
@@ -54,14 +56,14 @@ export const SOCIAL_LINKS = [
     }
 ]
 
-export const EXTERNAL_LINKS = {
+export const externalLinks: ExternalLink = {
     CV: 'https://drive.google.com/file/d/1kl8Aok4uem13xbpWtpUnXH98MQmJD4Xg/view',
     EMAIL: 'rifqimaulanax@gmail.com',
     MAILTO: 'mailto:rifqimaulanax@gmail.com',
     MAP: 'https://goo.gl/maps/DcXukKwgocguB6sd7'
 }
 
-export const HEADER_LINKS = [
+export const headerMenuItems: HeaderMenuItem[] = [
     {
         label: 'About',
         href: '/about'
@@ -76,7 +78,7 @@ export const HEADER_LINKS = [
     }
 ]
 
-export const TECHNOLOGIES: TechDetails[] = [
+export const techStacks: TechStack[] = [
     {
         label: 'Premiere Pro',
         logo: LogoPremierePro,
@@ -171,7 +173,7 @@ export const TECHNOLOGIES: TechDetails[] = [
     },
 ]
 
-export const EXPERIENCES: ExperienceDetails[] = [
+export const experiences: Experience[] = [
     {
         logo: LogoNextJs,
         darkModeLogo: LogoNextJs,
@@ -189,14 +191,14 @@ export const EXPERIENCES: ExperienceDetails[] = [
     },
 ]
 
-export const WORKS: WorksDetails[] = [
+export const projects: Project[] = [
     {
         name: 'RZ Barbershop Teaser',
         description:
             'a mini commercial video for RZ Barbershop.',
         url: 'https://www.youtube.com/watch?v=KdqK7SruAT0',
         previewImage: RZBarbershopPreview,
-        technologies: [
+        techStacks: [
             'Premiere Pro',
         ],
     },

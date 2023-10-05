@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Providers } from '../lib/providers'
+import { Providers } from '../lib/providers/chakra-themes-provider'
 import Header from '@/components/Layout/Header'
 import Footer from '@/components/Layout/Footer'
 
@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Rifqi Maulana',
-  description: 'Rifqi Maulana Abel Portfolio Website',
+  description: 'Rifqi Maulana Abel Portfolio Website!',
   icons: {
     icon: '/icon.ico',
   },

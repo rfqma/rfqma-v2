@@ -9,7 +9,7 @@ import {
     Icon,
     useMediaQuery
 } from '@chakra-ui/react'
-import { WORKS } from '@/lib/datas';
+import { projects } from '@/lib/utilities/data';
 import { StaticImageData } from 'next/image';
 import { BiLinkExternal } from 'react-icons/bi'
 
@@ -65,7 +65,7 @@ export default function Works() {
                     gap={10}
                 >
                     {
-                        WORKS.map((work, index) => {
+                        projects.map((work, index) => {
                             const workPreviewImage = work.previewImage
 
                             return (
@@ -130,7 +130,7 @@ export default function Works() {
                                                     maxW={'md'}
                                                 >
                                                     {
-                                                        work.technologies.map((technology, index) => {
+                                                        work.techStacks.map((technology, index) => {
                                                             return (
                                                                 <>
                                                                     <Box
@@ -207,7 +207,7 @@ export default function Works() {
                     gap={10}
                 >
                     {
-                        WORKS.map((work, index) => {
+                        projects.map((work, index) => {
                             const workPreviewImage = work.previewImage
 
                             return (
@@ -274,7 +274,7 @@ export default function Works() {
                                                     maxW={'md'}
                                                 >
                                                     {
-                                                        work.technologies.map((technology, index) => {
+                                                        work.techStacks.map((technology, index) => {
                                                             return (
                                                                 <>
                                                                     <Box

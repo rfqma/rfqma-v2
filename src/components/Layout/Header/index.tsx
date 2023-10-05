@@ -88,14 +88,14 @@ export default function Header() {
                                 About
                             </Text>
                         </Link>
-                        <Link href='/works'>
+                        <Link href='/projects'>
                             <Text
                                 fontWeight={'medium'}
                                 fontSize={'0.9rem'}
                                 color={linkColor}
                                 p={2}
                             >
-                                Works
+                                Projects
                             </Text>
                         </Link>
                         <Icon
@@ -183,13 +183,13 @@ export default function Header() {
                                             About
                                         </Text>
                                     </Link>
-                                    <Link href='/works' onClick={handleDrawerToggle}>
+                                    <Link href='/projects' onClick={handleDrawerToggle}>
                                         <Text
                                             fontWeight={'medium'}
                                             fontSize={'1rem'}
                                             color={linkColor}
                                         >
-                                            Works
+                                            Projects
                                         </Text>
                                     </Link>
                                     <Icon

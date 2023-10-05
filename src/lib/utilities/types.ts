@@ -1,13 +1,13 @@
 import type { StaticImageData } from "next/image";
 
-export type TechDetails = {
+export type TechStack = {
     logo?: string | StaticImageData
     darkModeLogo?: string | StaticImageData
     label: string
     url: string
 }
 
-export type ExperienceDetails = {
+export type Experience = {
     logo: string | StaticImageData
     darkModeLogo?: string | StaticImageData
     logoAlt: string
@@ -19,10 +19,22 @@ export type ExperienceDetails = {
     summary: string[]
 }
 
-export type WorksDetails = {
+export type Project = {
     name: string
     description: string
     url: string
     previewImage: string | StaticImageData
-    technologies: string[]
+    techStacks: string[]
+}
+
+export type HeaderMenuItem = {
+    label: string
+    href: string
+}
+
+export type ExternalLink = {
+    CV: string
+    EMAIL: string
+    MAILTO: string
+    MAP: string
 }

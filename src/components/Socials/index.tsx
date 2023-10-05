@@ -4,7 +4,7 @@ import {
     Icon,
     useColorModeValue
 } from "@chakra-ui/react";
-import { SOCIAL_LINKS } from "@/lib/datas";
+import { socialLinks } from "@/lib/utilities/data";
 
 export default function Social() {
     const iconColor = useColorModeValue('gray.600', 'gray.400')
@@ -15,7 +15,7 @@ export default function Social() {
                 gap={5}
             >
                 {
-                    SOCIAL_LINKS.map((social, index) => {
+                    socialLinks.map((social, index) => {
                         return (
                             <>
                                 <Link key={index} href={social.url}>

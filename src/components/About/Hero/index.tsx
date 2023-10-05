@@ -9,7 +9,7 @@ import {
     useMediaQuery
 } from '@chakra-ui/react'
 
-export default function HeroAbout() {
+export default function Hero() {
     const textColor = useColorModeValue('gray.600', 'gray.300')
     const titleColor = useColorModeValue('gray.900', 'gray.300')
     const cardBgColor = useColorModeValue('white', 'gray.800')
