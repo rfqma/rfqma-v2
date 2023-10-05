@@ -91,25 +91,24 @@ export const techStacks: TechStack[] = [
         darkModeLogo: LogoLightroomClassic,
         url: 'https://www.adobe.com/id_id/products/photoshop-lightroom-classic.html'
     },
-    {
-        label: 'Figma',
-        logo: LogoFigma,
-        darkModeLogo: LogoFigma,
-        url: 'https://www.figma.com/'
-    },
-    {
-        label: 'After Effects',
-        logo: LogoAfterEffects,
-        darkModeLogo: LogoAfterEffects,
-        url: 'https://www.adobe.com/id_id/products/aftereffects.html'
-    },
-
-    {
-        label: 'C++',
-        logo: LogoCPP,
-        darkModeLogo: LogoCPP,
-        url: 'https://cplusplus.com/'
-    },
+    // {
+    //     label: 'Figma',
+    //     logo: LogoFigma,
+    //     darkModeLogo: LogoFigma,
+    //     url: 'https://www.figma.com/'
+    // },
+    // {
+    //     label: 'After Effects',
+    //     logo: LogoAfterEffects,
+    //     darkModeLogo: LogoAfterEffects,
+    //     url: 'https://www.adobe.com/id_id/products/aftereffects.html'
+    // },
+    // {
+    //     label: 'C++',
+    //     logo: LogoCPP,
+    //     darkModeLogo: LogoCPP,
+    //     url: 'https://cplusplus.com/'
+    // },
     {
         label: 'HTML',
         logo: LogoHTML,
@@ -153,24 +152,24 @@ export const techStacks: TechStack[] = [
         darkModeLogo: LogoNodeJs,
         url: 'https://nodejs.org/en'
     },
-    {
-        label: 'Express.js',
-        logo: LogoExpressJsDark,
-        darkModeLogo: LogoExpressJsLight,
-        url: 'https://expressjs.com/'
-    },
-    {
-        label: 'MongoDB',
-        logo: LogoMongoDB,
-        darkModeLogo: LogoMongoDB,
-        url: 'https://www.mongodb.com/'
-    },
-    {
-        label: 'Git',
-        logo: LogoGit,
-        darkModeLogo: LogoGit,
-        url: 'https://git-scm.com/'
-    },
+    // {
+    //     label: 'Express.js',
+    //     logo: LogoExpressJsDark,
+    //     darkModeLogo: LogoExpressJsLight,
+    //     url: 'https://expressjs.com/'
+    // },
+    // {
+    //     label: 'MongoDB',
+    //     logo: LogoMongoDB,
+    //     darkModeLogo: LogoMongoDB,
+    //     url: 'https://www.mongodb.com/'
+    // },
+    // {
+    //     label: 'Git',
+    //     logo: LogoGit,
+    //     darkModeLogo: LogoGit,
+    //     url: 'https://git-scm.com/'
+    // },
 ]
 
 export const experiences: Experience[] = [
