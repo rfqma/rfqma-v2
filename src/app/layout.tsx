@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     icon: '/icon.ico',
   },
   verification: {
-    google: 'google0c02fcee8891bece'
+    google: '"-kQYKl3FMOo-GSH8PeDFGLdX91RKlhVMg6uMc70ypiI"'
   }
 }
 
