@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/icon.ico',
   },
+  verification: {
+    google: 'google0c02fcee8891bece'
+  }
 }
 
 export default function RootLayout({
