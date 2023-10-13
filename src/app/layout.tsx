@@ -17,9 +17,6 @@ export const metadata: Metadata = {
   description: 'Rifqi Maulana Abel Portfolio Website!',
   icons: {
     icon: '/icon.ico',
-  },
-  verification: {
-    google: '"-kQYKl3FMOo-GSH8PeDFGLdX91RKlhVMg6uMc70ypiI"'
   }
 }
 
