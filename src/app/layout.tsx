@@ -13,6 +13,10 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  icons: {
+    shortcut: '/icon.png',
+    apple: '/apple-icon.png'
+  },
   metadataBase: new URL('https://rifqimaulana.my.id'),
   title: {
     template: '%s | Rifqi Maulana',
