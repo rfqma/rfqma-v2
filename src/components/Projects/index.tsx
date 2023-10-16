@@ -1,3 +1,5 @@
+'use client'
+
 import {
     Container,
     Flex,
@@ -25,9 +27,7 @@ export default function Works() {
     const imageBgColor = useColorModeValue('gray.100', 'gray.700')
     const [isLargerThan768] = useMediaQuery("(min-width: 768px)")
 
-    // Define a function to convert StaticImageData to data URL
     const staticImageToDataURL = (image: StaticImageData): string => {
-        // You can't use .resolve with StaticImageData, so use a direct import path instead
         return image.src || ''
     }
 

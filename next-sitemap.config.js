@@ -7,7 +7,7 @@ module.exports = {
       // { userAgent: "*", disallow: "/admin" },
       { userAgent: "*", allow: "/" }
     ],
-    additionalSitemaps: [`${process.env.WEBSITE_URL}/server-sitemap.xml`]
-  }
+    // additionalSitemaps: [`${process.env.WEBSITE_URL}/server-sitemap.xml`]
+  },
   // exclude: ["/admin/*"]
 }

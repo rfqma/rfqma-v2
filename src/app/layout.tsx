@@ -13,10 +13,52 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Rifqi Maulana',
-  description: 'Rifqi Maulana Abel Portfolio Website!',
-  icons: {
-    icon: '/icon.ico',
+  metadataBase: new URL('https://rifqimaulana.my.id'),
+  title: {
+    template: '%s | Rifqi Maulana',
+    default: 'Rifqi Maulana',
+  },
+  description: 'Rifqi Maulana Personal Portfolio Website',
+  applicationName: 'Rifqi Maulana Portfolio Website',
+  keywords: ['Rifqi Maulana', 'Portfolio Website'],
+  authors: [{ name: 'Rifqi Maulana', url: 'https://github.com/rfqma' }],
+  creator: 'Rifqi Maulana',
+  publisher: 'Rifqi Maulana',
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US'
+    }
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://rifqimaulana.my.id',
+    title: 'Rifqi Maulana',
+    description: 'Rifqi Maulana Personal Portfolio Website',
+    siteName: 'Rifqi Maulana Portfolio Website',
+    images: [
+      {
+        url: `${process.env.WEBSITE_URL}/opengraph-image.png`,
+        width: 1200,
+        height: 630,
+        alt: `${process.env.WEBSITE_URL}/opengraph-image.alt.txt`
+      },
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: 'https://rifqimaulana.my.id',
+    creator: '@rfqma',
+    title: 'Rifqi Maulana',
+    description: 'Rifqi Maulana Personal Portfolio Website',
+    images: [
+      {
+        url: `${process.env.WEBSITE_URL}/twitter-image.png`,
+        width: 1200,
+        height: 630,
+        alt: `${process.env.WEBSITE_URL}/twitter-image.alt.txt`
+      },
+    ]
   }
 }
 

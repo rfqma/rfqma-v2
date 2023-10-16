@@ -1,21 +1,23 @@
-'use client'
-
-import {
-    Container,
-    useColorModeValue,
-} from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 import Works from '@/components/Projects'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Projects',
+    alternates: {
+        canonical: '/projects',
+    }
+}
 
 export default function HomePage() {
-    const bg = useColorModeValue('white', 'gray.950')
-
     return (
         <>
             <Container
-                bg={bg}
+                bg={'white'}
                 w={'100%'}
                 maxW={'unset'}
                 minHeight={'calc(100vh)'}
+                _dark={{ bg: 'gray.950' }}
             >
                 <Container
                     maxW={1200}
