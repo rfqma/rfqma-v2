@@ -14,8 +14,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   icons: {
-    shortcut: '/icon.png',
-    apple: '/apple-icon.png'
+    shortcut: '/apple-icon.png',
+    apple: '/apple-icon.png?v=4',
+    icon: '/favicon.ico?v=4'
   },
   metadataBase: new URL('https://rifqimaulana.my.id'),
   title: {
