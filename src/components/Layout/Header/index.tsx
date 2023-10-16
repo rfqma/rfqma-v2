@@ -58,7 +58,7 @@ export default function Header() {
                             letterSpacing={'tighter'}
                             color={iconColor}
                         >
-                            Maru Archive
+                            Rifqi Maulana
                         </Text>
                     </Link>
 
