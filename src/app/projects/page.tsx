@@ -1,5 +1,5 @@
 import { Container } from '@chakra-ui/react'
-import Works from '@/components/Projects'
+import Projects from '@/components/Projects'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function HomePage() {
                     maxW={1200}
                     pb={40}
                 >
-                    <Works />
+                    <Projects />
                 </Container>
             </Container >
         </>

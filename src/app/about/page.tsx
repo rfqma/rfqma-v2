@@ -23,7 +23,7 @@ export default function HomePage() {
             >
                 <Container
                     maxW={1200}
-                    py={'40'}
+                    py={'20'}
                 >
                     <Hero />
                     <Experience />

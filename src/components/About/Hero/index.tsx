@@ -20,7 +20,7 @@ export default function Hero() {
             alignItems={'center'}
             justifyContent={'center'}
             h={'100%'}
-            gap={20}
+            gap={32}
         >
 
             <Box
@@ -79,7 +79,7 @@ export default function Hero() {
                                 color={textColor}
                                 fontSize={'0.9rem'}
                             >
-                                I&apos;m a 20 years old who passionate about photography, videography, and computer related stuff.
+                                I&apos;m a 21 years old who passionate about photography, videography, and computer related stuff.
                                 I am an ambitious student pursuing a degree on informatics at Universitas Pembangunan Nasional Veteran Yogyakarta.
                             </Text>
                             <Text
@@ -113,12 +113,13 @@ export default function Hero() {
             alignItems={'center'}
             justifyContent={'center'}
             h={'100%'}
-            gap={12}
+            gap={10}
             flexDirection={'column'}
         >
 
             <Box
-                p={150}
+                p={140}
+                pb={115}
                 bg={cardBgColor}
                 borderRadius={'3xl'}
                 boxShadow={'2xl'}
@@ -131,12 +132,11 @@ export default function Hero() {
                 >
                     <Image
                         borderRadius={'3xl'}
-                        boxSize={'300px'}
+                        boxSize={'250px'}
                         src={'/images/rifqimaulana-headshot.png'}
                         alt={'rifqimaulana-headshot.png'}
                         position={'absolute'}
-                        top={'-20px'}
-                        right={'-20px'}
+                        top={'-10px'}
                     />
                 </Flex>
             </Box>
@@ -159,7 +159,7 @@ export default function Hero() {
                             <Text
                                 fontWeight={'extrabold'}
                                 color={titleColor}
-                                fontSize={'2rem'}
+                                fontSize={'1.4rem'}
                             >
                                 Curious about me?
                             </Text>

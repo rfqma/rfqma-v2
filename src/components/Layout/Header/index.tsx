@@ -4,7 +4,6 @@ import {
     chakra,
     Container,
     Flex,
-    Image,
     Icon,
     Text,
     useColorMode,
@@ -139,7 +138,7 @@ export default function Header() {
                             letterSpacing={'tighter'}
                             color={iconColor}
                         >
-                            Maru Archive
+                            Rifqi Maulana
                         </Text>
                     </Link>
 

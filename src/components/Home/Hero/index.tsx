@@ -12,10 +12,9 @@ import {
 } from '@chakra-ui/react'
 import { HiLocationMarker } from 'react-icons/hi'
 import { GoDotFill } from 'react-icons/go'
-import { AiFillEye, AiFillCopy } from 'react-icons/ai'
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import Social from '@/components/Socials'
 import { externalLinks } from '@/lib/utilities/data'
-import { copyTextToClipboard } from '@/lib/utilities/copyTextToClipboard'
 
 export default function Hero() {
     const iconColor = useColorModeValue('gray.600', 'gray.400')
@@ -26,29 +25,14 @@ export default function Hero() {
     const buttonIconColor = useColorModeValue('gray.300', 'gray.600')
     const buttonHoverBgColor = useColorModeValue('gray.200', 'gray.600')
     const buttonHoverIconColor = useColorModeValue('gray.600', 'gray.300')
-    const borderColor = useColorModeValue('gray.200', 'gray.600')
     const [isLargerThan768] = useMediaQuery('(min-width: 768px)')
-
-    type CopyValue = 'email'
-
-    const handleCopyText = async (text: string, type: CopyValue) => {
-        try {
-            await copyTextToClipboard(text)
-            let timeoutId: any = setTimeout(() => {
-                clearTimeout(timeoutId)
-            }, 1500)
-        } catch (error) {
-            alert('Failed to copy text!')
-            console.log(error)
-        }
-    }
 
     const desktopLayout = (
         <Flex
             alignItems={'center'}
             justifyContent={'center'}
             h={'100%'}
-            gap={20}
+            gap={40}
         >
 
             <Box
@@ -56,7 +40,7 @@ export default function Hero() {
                 bg={cardBgColor}
                 borderRadius={'xl'}
                 boxShadow={'2xl'}
-                pr={'36'}
+                pr={'40'}
             >
                 <Flex
                     flexDirection={'column'}
@@ -77,7 +61,7 @@ export default function Hero() {
                             color={textColor}
                             fontSize={'0.9rem'}
                         >
-                            I&apos;m a 20yo Minimalist, Digital Native, Photography and Videography Enthusiast. <br />
+                            I&apos;m a 21yo Minimalist, Photography and Videography Enthusiast. <br />
                             Undergraduate student majoring on Informatics.
                         </Text>
                     </Flex>
@@ -169,13 +153,6 @@ export default function Hero() {
                                     {externalLinks.EMAIL}
                                 </Text>
                             </Link>
-                            <Icon
-                                as={AiFillCopy}
-                                boxSize={4}
-                                color={iconColor}
-                                cursor={'pointer'}
-                                onClick={() => handleCopyText(externalLinks.EMAIL, 'email')}
-                            />
                         </Flex>
                     </Flex>
                     <Flex
@@ -184,41 +161,7 @@ export default function Hero() {
                         <Flex
                             flexDirection={'column'}
                             alignItems={'center'}
-                            p={1}
-                            pr={5}
-                            gap={4}
                         >
-                            <Text
-                                color={titleColor}
-                                fontWeight={'semibold'}
-                                fontSize={'1rem'}
-                            >
-                                Age
-                            </Text>
-                            <Text
-                                color={textColor}
-                                fontSize={'0.9rem'}
-                                fontWeight={'normal'}
-                            >
-                                20
-                            </Text>
-                        </Flex>
-                        <Flex
-                            flexDirection={'column'}
-                            alignItems={'center'}
-                            p={1}
-                            pl={5}
-                            gap={2}
-                            borderLeft={'1px solid'}
-                            borderColor={borderColor}
-                        >
-                            <Text
-                                color={titleColor}
-                                fontWeight={'semibold'}
-                                fontSize={'1rem'}
-                            >
-                                Curriculum Vitae
-                            </Text>
                             <Link href={externalLinks.CV}>
                                 <Box
                                     as='button'
@@ -238,11 +181,11 @@ export default function Hero() {
                                             fontWeight={'normal'}
                                             fontSize={'0.8rem'}
                                         >
-                                            take a look
+                                            Curriculum Vitae
                                         </Text>
                                         <Icon
-                                            as={AiFillEye}
-                                            boxSize={5}
+                                            as={HiOutlineArrowNarrowRight}
+                                            boxSize={4}
                                         />
                                     </Flex>
                                 </Box>
@@ -311,56 +254,15 @@ export default function Hero() {
                                     {externalLinks.EMAIL}
                                 </Text>
                             </Link>
-                            <Icon
-                                as={AiFillCopy}
-                                boxSize={4}
-                                color={iconColor}
-                                cursor={'pointer'}
-                                onClick={() => handleCopyText(externalLinks.EMAIL, 'email')}
-                            />
                         </Flex>
                     </Flex>
                     <Flex
-                        mt={'30px'}
+                        mt={'25px'}
                     >
                         <Flex
                             flexDirection={'column'}
                             alignItems={'center'}
-                            p={1}
-                            pr={5}
-                            gap={4}
                         >
-                            <Text
-                                color={titleColor}
-                                fontWeight={'semibold'}
-                                fontSize={'1rem'}
-                            >
-                                Age
-                            </Text>
-                            <Text
-                                color={textColor}
-                                fontSize={'0.9rem'}
-                                fontWeight={'normal'}
-                            >
-                                20
-                            </Text>
-                        </Flex>
-                        <Flex
-                            flexDirection={'column'}
-                            alignItems={'center'}
-                            p={1}
-                            pl={5}
-                            gap={2}
-                            borderLeft={'1px solid'}
-                            borderColor={borderColor}
-                        >
-                            <Text
-                                color={titleColor}
-                                fontWeight={'semibold'}
-                                fontSize={'1rem'}
-                            >
-                                Curriculum Vitae
-                            </Text>
                             <Link href={externalLinks.CV}>
                                 <Box
                                     as='button'
@@ -380,11 +282,11 @@ export default function Hero() {
                                             fontWeight={'normal'}
                                             fontSize={'0.8rem'}
                                         >
-                                            take a look
+                                            Curriculum Vitae
                                         </Text>
                                         <Icon
-                                            as={AiFillEye}
-                                            boxSize={5}
+                                            as={HiOutlineArrowNarrowRight}
+                                            boxSize={4}
                                         />
                                     </Flex>
                                 </Box>
@@ -395,7 +297,8 @@ export default function Hero() {
             </Box>
 
             <Box
-                p={10}
+                p={7}
+                py={10}
                 bg={cardBgColor}
                 borderRadius={'xl'}
                 boxShadow={'2xl'}
@@ -422,7 +325,7 @@ export default function Hero() {
                             color={textColor}
                             fontSize={'0.9rem'}
                         >
-                            I&apos;m a 20yo Minimalist, Digital Native, Photography and Videography Enthusiast. <br />
+                            I&apos;m a 21yo Minimalist, Photography and Videography Enthusiast. <br />
                             Undergraduate student majoring on Informatics.
                         </Text>
                     </Flex>

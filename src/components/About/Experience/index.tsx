@@ -43,6 +43,7 @@ export default function Experience() {
             <Container
                 maxW={768}
                 pt={'40'}
+                pb={'20'}
             >
                 <Flex
                     display={'flex'}
@@ -197,151 +198,147 @@ export default function Experience() {
         <Container
             bg={bg}
             w={'100%'}
-            maxW={'unset'}
+            pt={'20'}
+            pb={'20'}
         >
-            <Container
-                maxW={1200}
-                pt={'40'}
+            <Flex
+                flexDirection={'column'}
+                gap={4}
+                textAlign={'center'}
             >
-                <Flex
-                    flexDirection={'column'}
-                    gap={4}
-                    textAlign={'center'}
+                <Text
+                    fontWeight={'normal'}
+                    fontSize={'1rem'}
+                    color={textColor}
                 >
-                    <Text
-                        fontWeight={'normal'}
-                        fontSize={'1rem'}
-                        color={textColor}
-                    >
-                        🖥️ Here is a quick summary of my most recent experiences:
-                    </Text>
-                </Flex>
+                    🖥️ Here is a quick summary of my most recent experiences:
+                </Text>
+            </Flex>
 
-                <Flex
-                    h={'100%'}
-                    pt={10}
-                    flexDirection={'column'}
-                    gap={10}
-                >
-                    {
-                        experiences.map((experience, index) => {
-                            const logoCondition =
-                                colorMode === 'light' ? experience.logo : experience.darkModeLogo
-                            const experienceLogo = logoCondition
+            <Flex
+                h={'100%'}
+                pt={10}
+                flexDirection={'column'}
+                gap={10}
+            >
+                {
+                    experiences.map((experience, index) => {
+                        const logoCondition =
+                            colorMode === 'light' ? experience.logo : experience.darkModeLogo
+                        const experienceLogo = logoCondition
 
-                            return (
-                                <Box
-                                    key={index}
-                                    p={6}
-                                    bg={cardBgColor}
-                                    borderRadius={'2xl'}
-                                    boxShadow={'2xl'}
+                        return (
+                            <Box
+                                key={index}
+                                p={6}
+                                bg={cardBgColor}
+                                borderRadius={'2xl'}
+                                boxShadow={'2xl'}
+                            >
+                                <Flex
+                                    flexDirection={'column'}
+                                    gap={5}
                                 >
+                                    <Image
+                                        src={
+                                            typeof experienceLogo === 'string'
+                                                ? experienceLogo
+                                                : staticImageToDataURL(experienceLogo as StaticImageData)
+                                        }
+                                        alt={experience.logoAlt}
+                                        verticalAlign={'top'}
+                                        maxWidth={45}
+                                    />
                                     <Flex
                                         flexDirection={'column'}
                                         gap={5}
+                                        maxW={'lg'}
                                     >
-                                        <Image
-                                            src={
-                                                typeof experienceLogo === 'string'
-                                                    ? experienceLogo
-                                                    : staticImageToDataURL(experienceLogo as StaticImageData)
-                                            }
-                                            alt={experience.logoAlt}
-                                            verticalAlign={'top'}
-                                            maxWidth={45}
-                                        />
                                         <Flex
                                             flexDirection={'column'}
-                                            gap={5}
-                                            maxW={'lg'}
+                                            gap={1}
                                         >
+                                            <Text
+                                                fontWeight={'extrabold'}
+                                                color={cardTitleTextColor}
+                                                fontSize={'1.1rem'}
+                                            >
+                                                {experience.position}
+                                            </Text>
                                             <Flex
-                                                flexDirection={'column'}
                                                 gap={1}
                                             >
                                                 <Text
-                                                    fontWeight={'extrabold'}
-                                                    color={cardTitleTextColor}
-                                                    fontSize={'1.1rem'}
+                                                    color={cardSecondaryTextColor}
+                                                    fontSize={'0.9rem'}
+                                                    fontWeight={'normal'}
                                                 >
-                                                    {experience.position}
+                                                    at
                                                 </Text>
-                                                <Flex
-                                                    gap={1}
+                                                <Text
+                                                    color={cardSecondaryTextColor}
+                                                    fontSize={'0.9rem'}
+                                                    fontWeight={'normal'}
                                                 >
-                                                    <Text
-                                                        color={cardSecondaryTextColor}
-                                                        fontSize={'0.9rem'}
-                                                        fontWeight={'normal'}
-                                                    >
-                                                        at
-                                                    </Text>
-                                                    <Text
-                                                        color={cardSecondaryTextColor}
-                                                        fontSize={'0.9rem'}
-                                                        fontWeight={'normal'}
-                                                    >
-                                                        {experience.name}
-                                                    </Text>
-                                                </Flex>
-                                                <Flex>
-                                                    <Text
-                                                        color={cardSecondaryTextColor}
-                                                        fontSize={'0.7rem'}
-                                                        fontWeight={'normal'}
-                                                    >
-                                                        {
-                                                            new Intl.DateTimeFormat('en-US', dateFormatOptions)
-                                                                .format(experience.startDate)
-                                                        }
-                                                        {' '}
-                                                        {'-'}
-                                                        {' '}
-                                                        {
-                                                            experience.currentlyWorkHere
-                                                                ? 'Present'
-                                                                : experience.endDate ?
-                                                                    new Intl.DateTimeFormat('en-US', dateFormatOptions).format(experience.endDate)
-                                                                    : 'NA'
-                                                        }
-                                                    </Text>
-                                                </Flex>
+                                                    {experience.name}
+                                                </Text>
                                             </Flex>
-                                            <Flex
-                                                flexDirection={'column'}
-                                                gap={2}
-                                            >
-                                                {
-                                                    experience.summary.map((summary, index) => {
-                                                        return (
-                                                            <>
-                                                                <UnorderedList>
-                                                                    <ListItem
-                                                                        key={index}
-                                                                    >
-                                                                        <Text
-                                                                            fontWeight={'normal'}
-                                                                            color={cardPrimaryTextColor}
-                                                                            fontSize={'0.9rem'}
-                                                                        >
-                                                                            {summary}
-                                                                        </Text>
-                                                                    </ListItem>
-                                                                </UnorderedList>
-                                                            </>
-                                                        )
-                                                    })
-                                                }
+                                            <Flex>
+                                                <Text
+                                                    color={cardSecondaryTextColor}
+                                                    fontSize={'0.7rem'}
+                                                    fontWeight={'normal'}
+                                                >
+                                                    {
+                                                        new Intl.DateTimeFormat('en-US', dateFormatOptions)
+                                                            .format(experience.startDate)
+                                                    }
+                                                    {' '}
+                                                    {'-'}
+                                                    {' '}
+                                                    {
+                                                        experience.currentlyWorkHere
+                                                            ? 'Present'
+                                                            : experience.endDate ?
+                                                                new Intl.DateTimeFormat('en-US', dateFormatOptions).format(experience.endDate)
+                                                                : 'NA'
+                                                    }
+                                                </Text>
                                             </Flex>
                                         </Flex>
+                                        <Flex
+                                            flexDirection={'column'}
+                                            gap={2}
+                                        >
+                                            {
+                                                experience.summary.map((summary, index) => {
+                                                    return (
+                                                        <>
+                                                            <UnorderedList>
+                                                                <ListItem
+                                                                    key={index}
+                                                                >
+                                                                    <Text
+                                                                        fontWeight={'normal'}
+                                                                        color={cardPrimaryTextColor}
+                                                                        fontSize={'0.9rem'}
+                                                                    >
+                                                                        {summary}
+                                                                    </Text>
+                                                                </ListItem>
+                                                            </UnorderedList>
+                                                        </>
+                                                    )
+                                                })
+                                            }
+                                        </Flex>
                                     </Flex>
-                                </Box>
-                            )
-                        })}
-                </Flex>
-            </Container>
-        </Container >
+                                </Flex>
+                            </Box>
+                        )
+                    })}
+            </Flex>
+        </Container>
     )
 
     return (

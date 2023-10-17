@@ -3,16 +3,13 @@
 import {
     Container,
     Flex,
-    Icon,
     Text,
     useColorModeValue,
     useMediaQuery
 } from '@chakra-ui/react'
-import { BiSolidCopyright } from 'react-icons/bi'
 
 export default function Footer() {
     const bg = useColorModeValue('gray.50', 'gray.900')
-    const iconColor = useColorModeValue('gray.600', 'gray.300')
     const textColor = useColorModeValue('gray.600', 'gray.300')
     const [isLargerThan768] = useMediaQuery('(min-width: 768px)')
 
@@ -41,13 +38,12 @@ export default function Footer() {
                     flexDirection={'row'}
                     alignItems={'center'}
                 >
-                    <Icon as={BiSolidCopyright} boxSize={5} color={iconColor} />
                     <Text
                         color={textColor}
                         fontWeight={'regular'}
                         ml={2}
                     >
-                        {currentYear} Copyright by Rifqi Maulana
+                        &copy; {currentYear} Copyright by Rifqi Maulana
                     </Text>
                 </Flex>
             </Flex>
@@ -75,14 +71,13 @@ export default function Footer() {
                     flexDirection={'row'}
                     alignItems={'center'}
                 >
-                    <Icon as={BiSolidCopyright} boxSize={5} color={iconColor} />
                     <Text
                         color={textColor}
                         fontWeight={'regular'}
                         ml={2}
                         fontSize={'0.8rem'}
                     >
-                        {currentYear} Copyright by Rifqi Maulana
+                        &copy; {currentYear} Copyright by Rifqi Maulana
                     </Text>
                 </Flex>
             </Flex>

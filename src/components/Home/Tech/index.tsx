@@ -104,77 +104,72 @@ export default function Tech() {
         <Container
             bg={bg}
             w={'100%'}
-            maxW={'unset'}
+            maxW={500}
+            pt={'32'}
+            textAlign={'center'}
+            alignItems={'center'}
         >
-            <Container
-                maxW={1200}
-                pt={'40'}
-                textAlign={'center'}
-                alignItems={'center'}
+            <Flex
+                display={'flex'}
+                flexDirection={'column'}
             >
-                <Flex
-                    display={'flex'}
-                    flexDirection={'column'}
-                    gap={4}
+                <Text
+                    fontWeight={'normal'}
+                    fontSize={'0.9rem'}
+                    color={textColor}
                 >
-                    <Text
-                        fontWeight={'normal'}
-                        fontSize={'1rem'}
-                        color={textColor}
-                    >
-                        🔨 The tools and technologies I usually use:
-                    </Text>
-                </Flex>
-                <Grid
-                    templateColumns={'repeat(3, minmax(0, 1fr))'}
-                    rowGap={8}
-                    mt={10}
-                >
-                    {
-                        techStacks.map((tech, index) => {
-                            const logoCondition =
-                                colorMode === 'light' ? tech.logo : tech.darkModeLogo
-                            const techLogo = logoCondition
+                    🔨 The tools and technologies I usually use:
+                </Text>
+            </Flex>
+            <Grid
+                templateColumns={'repeat(3, minmax(0, 1fr))'}
+                rowGap={8}
+                mt={10}
+            >
+                {
+                    techStacks.map((tech, index) => {
+                        const logoCondition =
+                            colorMode === 'light' ? tech.logo : tech.darkModeLogo
+                        const techLogo = logoCondition
 
-                            return (
-                                <GridItem
-                                    key={index}
-                                    display={'flex'}
-                                    flexDirection={'column'}
-                                    alignItems={'center'}
-                                    textAlign={'center'}
-                                    gap={2}
+                        return (
+                            <GridItem
+                                key={index}
+                                display={'flex'}
+                                flexDirection={'column'}
+                                alignItems={'center'}
+                                textAlign={'center'}
+                                gap={3}
+                            >
+                                <Link href={tech.url}>
+                                    <Image
+                                        src={
+                                            typeof techLogo === 'string'
+                                                ? techLogo
+                                                : staticImageToDataURL(techLogo as StaticImageData)
+                                        }
+                                        alt={tech.label}
+                                        _hover={{
+                                            transform: 'scale(1.1)'
+                                        }}
+                                        transition={'transform 0.3s ease'}
+                                        width={42}
+                                        height={42}
+                                    />
+                                </Link>
+                                <Text
+                                    fontWeight={'normal'}
+                                    fontSize={'0.7rem'}
+                                    color={textColor}
                                 >
-                                    <Link href={tech.url}>
-                                        <Image
-                                            src={
-                                                typeof techLogo === 'string'
-                                                    ? techLogo
-                                                    : staticImageToDataURL(techLogo as StaticImageData)
-                                            }
-                                            alt={tech.label}
-                                            _hover={{
-                                                transform: 'scale(1.1)'
-                                            }}
-                                            transition={'transform 0.3s ease'}
-                                            width={50}
-                                            height={50}
-                                        />
-                                    </Link>
-                                    <Text
-                                        fontWeight={'normal'}
-                                        fontSize={'0.7rem'}
-                                        color={textColor}
-                                    >
-                                        {tech.label}
-                                    </Text>
-                                </GridItem>
-                            )
-                        })
-                    }
-                </Grid>
-            </Container>
-        </Container >
+                                    {tech.label}
+                                </Text>
+                            </GridItem>
+                        )
+                    })
+                }
+            </Grid>
+        </Container>
     )
 
     return (
