@@ -227,7 +227,7 @@ export const projects: Project[] = [
         name: 'Valorant 101',
         description:
             'data display playground from valorant-api.com',
-        url: 'https://blog.rifqimaulana.my.id',
+        url: 'https://valorant101.vercel.app',
         previewImage: Valorant101,
         techStacks: [
             'Next.js',
