@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     siteName: 'Rifqi Maulana Portfolio Website',
     images: [
       {
-        url: `${process.env.WEBSITE_URL}/opengraph-image.png`,
+        url: `${process.env.WEBSITE_URL}/opengraphs/opengraph-image.png`,
         width: 1200,
         height: 630,
-        alt: `${process.env.WEBSITE_URL}/opengraph-image.alt.txt`
+        alt: `${process.env.WEBSITE_URL}/opengraphs/opengraph-image.alt.txt`
       },
     ]
   },
@@ -58,10 +58,10 @@ export const metadata: Metadata = {
     description: 'Rifqi Maulana Personal Portfolio Website',
     images: [
       {
-        url: `${process.env.WEBSITE_URL}/twitter-image.png`,
+        url: `${process.env.WEBSITE_URL}/opengraphs/twitter-image.png`,
         width: 1200,
         height: 630,
-        alt: `${process.env.WEBSITE_URL}/twitter-image.alt.txt`
+        alt: `${process.env.WEBSITE_URL}/opengraphs/twitter-image.alt.txt`
       },
     ]
   }

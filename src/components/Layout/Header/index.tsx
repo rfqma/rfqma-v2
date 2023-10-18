@@ -20,6 +20,7 @@ import {
 import { SunIcon, MoonIcon, HamburgerIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
 import { useState } from 'react'
+import { headerMenuItems } from '@/lib/utilities/data'
 
 export default function Header() {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -67,36 +68,24 @@ export default function Header() {
                         fontSize={'1rem'}
                         gap={5}
                     >
-                        <Link href='/'>
-                            <Text
-                                fontWeight={'medium'}
-                                fontSize={'0.9rem'}
-                                color={linkColor}
-                                p={2}
-                            >
-                                Home
-                            </Text>
-                        </Link>
-                        <Link href='/about'>
-                            <Text
-                                fontWeight={'medium'}
-                                fontSize={'0.9rem'}
-                                color={linkColor}
-                                p={2}
-                            >
-                                About
-                            </Text>
-                        </Link>
-                        <Link href='/projects'>
-                            <Text
-                                fontWeight={'medium'}
-                                fontSize={'0.9rem'}
-                                color={linkColor}
-                                p={2}
-                            >
-                                Projects
-                            </Text>
-                        </Link>
+                        {
+                            headerMenuItems.map((item, index) => {
+                                return (
+                                    <>
+                                        <Link key={index} href={item.href}>
+                                            <Text
+                                                fontWeight={'medium'}
+                                                fontSize={'0.9rem'}
+                                                color={linkColor}
+                                                p={2}
+                                            >
+                                                {item.label}
+                                            </Text>
+                                        </Link>
+                                    </>
+                                )
+                            })
+                        }
                         <Icon
                             fontSize={'lg'}
                             cursor={'pointer'}
@@ -164,33 +153,23 @@ export default function Header() {
                                     alignItems={'flex-start'}
                                     pt={10}
                                 >
-                                    <Link href='/' onClick={handleDrawerToggle}>
-                                        <Text
-                                            fontWeight={'medium'}
-                                            fontSize={'1rem'}
-                                            color={linkColor}
-                                        >
-                                            Home
-                                        </Text>
-                                    </Link>
-                                    <Link href='/about' onClick={handleDrawerToggle}>
-                                        <Text
-                                            fontWeight={'medium'}
-                                            fontSize={'1rem'}
-                                            color={linkColor}
-                                        >
-                                            About
-                                        </Text>
-                                    </Link>
-                                    <Link href='/projects' onClick={handleDrawerToggle}>
-                                        <Text
-                                            fontWeight={'medium'}
-                                            fontSize={'1rem'}
-                                            color={linkColor}
-                                        >
-                                            Projects
-                                        </Text>
-                                    </Link>
+                                    {
+                                        headerMenuItems.map((item, index) => {
+                                            return (
+                                                <>
+                                                    <Link key={index} href={item.href} onClick={handleDrawerToggle}>
+                                                        <Text
+                                                            fontWeight={'medium'}
+                                                            fontSize={'1rem'}
+                                                            color={linkColor}
+                                                        >
+                                                            {item.label}
+                                                        </Text>
+                                                    </Link>
+                                                </>
+                                            )
+                                        })
+                                    }
                                     <Icon
                                         fontSize={'lg'}
                                         cursor={'pointer'}

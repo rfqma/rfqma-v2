@@ -18,7 +18,9 @@ import LogoCSS from '/public/images/logos/logo-css.svg'
 import { AiFillGithub, AiFillInstagram, AiFillYoutube, AiFillLinkedin } from 'react-icons/ai'
 import { SiPexels } from 'react-icons/si'
 
-import RZBarbershopPreview from '/public/images/projects/work-rzbarbershopteaser.jpg'
+import RZBarbershopPreview from '/public/images/projects/project-rzbarbershopteaser.jpg'
+import OurBlogPreview from '/public/images/projects/project-ourblog.jpg'
+import Valorant101 from '/public/images/projects/project-valorant101.jpg'
 
 import {
     TechStack,
@@ -65,16 +67,20 @@ export const externalLinks: ExternalLink = {
 
 export const headerMenuItems: HeaderMenuItem[] = [
     {
+        label: 'Home',
+        href: '/'
+    },
+    {
         label: 'About',
         href: '/about'
     },
     {
-        label: 'Works',
-        href: '/works'
+        label: 'Projects',
+        href: '/projects'
     },
     {
-        label: 'Contact',
-        href: '/contact'
+        label: 'V1',
+        href: 'https://v1.rifqimaulana.my.id'
     }
 ]
 
@@ -199,6 +205,34 @@ export const projects: Project[] = [
         previewImage: RZBarbershopPreview,
         techStacks: [
             'Premiere Pro',
+        ],
+    },
+    {
+        name: 'Our Blog',
+        description:
+            'simple blog web based app.',
+        url: 'https://blog.rifqimaulana.my.id',
+        previewImage: OurBlogPreview,
+        techStacks: [
+            'Next.js',
+            'TypeScript',
+            'Firebase',
+            'PostgreSQL',
+            'Prisma',
+            'Tailwind CSS',
+            'React-Quill'
+        ],
+    },
+    {
+        name: 'Valorant 101',
+        description:
+            'data display playground from valorant-api.com',
+        url: 'https://blog.rifqimaulana.my.id',
+        previewImage: Valorant101,
+        techStacks: [
+            'Next.js',
+            'TypeScript',
+            'Tailwind CSS',
         ],
     },
 ]
