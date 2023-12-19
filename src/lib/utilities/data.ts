@@ -80,7 +80,7 @@ export const headerMenuItems: HeaderMenuItem[] = [
     },
     {
         label: 'V1',
-        href: 'https://v1.rifqimaulana.my.id'
+        href: 'https://v1.rifqimaulana.xyz'
     }
 ]
 
