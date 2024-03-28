@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png?v=4',
     icon: '/favicon.ico?v=4'
   },
-  metadataBase: new URL('https://rifqimaulana.my.id'),
+  metadataBase: new URL('https://rifqimaulana.xyz'),
   title: {
     template: '%s | Rifqi Maulana',
     default: 'Rifqi Maulana',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    url: 'https://rifqimaulana.my.id',
+    url: 'https://rifqimaulana.xyz',
     title: 'Rifqi Maulana',
     description: 'Rifqi Maulana Personal Portfolio Website',
     siteName: 'Rifqi Maulana Portfolio Website',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: 'https://rifqimaulana.my.id',
+    site: 'https://rifqimaulana.xyz',
     creator: '@rfqma',
     title: 'Rifqi Maulana',
     description: 'Rifqi Maulana Personal Portfolio Website',

@@ -80,7 +80,7 @@ export default function Hero() {
                                     color={textColor}
                                     fontSize={'0.9rem'}
                                 >
-                                    Belitung, Indonesia
+                                    Yogyakarta, Indonesia
                                 </Text>
                             </Flex>
                         </Link>
@@ -181,7 +181,7 @@ export default function Hero() {
                                             fontWeight={'normal'}
                                             fontSize={'0.8rem'}
                                         >
-                                            Curriculum Vitae
+                                            My Resume
                                         </Text>
                                         <Icon
                                             as={HiOutlineArrowNarrowRight}
@@ -282,7 +282,7 @@ export default function Hero() {
                                             fontWeight={'normal'}
                                             fontSize={'0.8rem'}
                                         >
-                                            Curriculum Vitae
+                                            My Resume
                                         </Text>
                                         <Icon
                                             as={HiOutlineArrowNarrowRight}
@@ -346,7 +346,7 @@ export default function Hero() {
                                     color={textColor}
                                     fontSize={'0.9rem'}
                                 >
-                                    Belitung, Indonesia
+                                    Yogyakarta, Indonesia
                                 </Text>
                             </Flex>
                         </Link>

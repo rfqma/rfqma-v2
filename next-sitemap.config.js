@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.WEBSITE_URL || "https://www.rifqimaulana.my.id",
+  siteUrl: process.env.WEBSITE_URL || "https://www.rifqimaulana.xyz",
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [

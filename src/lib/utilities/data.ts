@@ -59,10 +59,10 @@ export const socialLinks = [
 ]
 
 export const externalLinks: ExternalLink = {
-    CV: 'https://drive.google.com/file/d/1kl8Aok4uem13xbpWtpUnXH98MQmJD4Xg/view',
+    CV: 'https://drive.google.com/file/d/1Fdgs_s1G10O0Nr5Vip0pjRTf0Z03jZgK/view?usp=sharing',
     EMAIL: 'rifqimaulanax@gmail.com',
     MAILTO: 'mailto:rifqimaulanax@gmail.com',
-    MAP: 'https://goo.gl/maps/DcXukKwgocguB6sd7'
+    MAP: 'https://maps.app.goo.gl/1YJRYAgFmHrrhgj17'
 }
 
 export const headerMenuItems: HeaderMenuItem[] = [
@@ -211,7 +211,7 @@ export const projects: Project[] = [
         name: 'Our Blog',
         description:
             'simple blog web based app.',
-        url: 'https://blog.rifqimaulana.my.id',
+        url: 'https://blog.rifqimaulana.xyz',
         previewImage: OurBlogPreview,
         techStacks: [
             'Next.js',
