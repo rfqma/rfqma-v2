@@ -13,57 +13,14 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  icons: {
-    shortcut: '/apple-icon.png',
-    apple: '/apple-icon.png?v=4',
-    icon: '/favicon.ico?v=4'
-  },
   metadataBase: new URL('https://rifqimaulana.xyz'),
   title: {
-    template: '%s | Rifqi Maulana',
     default: 'Rifqi Maulana',
+    template: '%s - Rifqi Maulana',
   },
-  description: 'Rifqi Maulana Personal Portfolio Website',
-  applicationName: 'Rifqi Maulana Portfolio Website',
-  keywords: ['Rifqi Maulana', 'Portfolio Website'],
-  authors: [{ name: 'Rifqi Maulana', url: 'https://github.com/rfqma' }],
-  creator: 'Rifqi Maulana',
-  publisher: 'Rifqi Maulana',
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-US': '/en-US'
-    }
-  },
-  openGraph: {
-    type: 'website',
-    url: 'https://rifqimaulana.xyz',
-    title: 'Rifqi Maulana',
-    description: 'Rifqi Maulana Personal Portfolio Website',
-    siteName: 'Rifqi Maulana Portfolio Website',
-    images: [
-      {
-        url: `${process.env.WEBSITE_URL}/opengraphs/opengraph-image.png`,
-        width: 1200,
-        height: 630,
-        alt: `${process.env.WEBSITE_URL}/opengraphs/opengraph-image.alt.txt`
-      },
-    ]
-  },
+  description: 'a Developer, Photography and Videography Enthusiast.',
   twitter: {
     card: 'summary_large_image',
-    site: 'https://rifqimaulana.xyz',
-    creator: '@rfqma',
-    title: 'Rifqi Maulana',
-    description: 'Rifqi Maulana Personal Portfolio Website',
-    images: [
-      {
-        url: `${process.env.WEBSITE_URL}/opengraphs/twitter-image.png`,
-        width: 1200,
-        height: 630,
-        alt: `${process.env.WEBSITE_URL}/opengraphs/twitter-image.alt.txt`
-      },
-    ]
   }
 }
 

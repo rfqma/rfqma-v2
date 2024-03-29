@@ -5,7 +5,6 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: 'About',
-    description: 'Rifqi Maulana Personal Portfolio Website',
     alternates: {
         canonical: '/about',
     }
