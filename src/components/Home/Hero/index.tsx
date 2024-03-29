@@ -162,7 +162,7 @@ export default function Hero() {
                             flexDirection={'column'}
                             alignItems={'center'}
                         >
-                            <Link href={externalLinks.CV}>
+                            <Link target='_blank' href={externalLinks.CV}>
                                 <Box
                                     as='button'
                                     transition='all 0.2s cubic-bezier(.08,.52,.52,1)'
@@ -263,7 +263,7 @@ export default function Hero() {
                             flexDirection={'column'}
                             alignItems={'center'}
                         >
-                            <Link href={externalLinks.CV}>
+                            <Link target='_blank' href={externalLinks.CV}>
                                 <Box
                                     as='button'
                                     transition='all 0.2s cubic-bezier(.08,.52,.52,1)'

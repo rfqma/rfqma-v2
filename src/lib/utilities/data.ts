@@ -20,7 +20,10 @@ import { SiPexels } from 'react-icons/si'
 
 import RZBarbershopPreview from '/public/images/projects/project-rzbarbershopteaser.jpg'
 import OurBlogPreview from '/public/images/projects/project-ourblog.jpg'
-import Valorant101 from '/public/images/projects/project-valorant101.jpg'
+import Valorant101Preview from '/public/images/projects/project-valorant101.jpg'
+
+import TechaveDevLogo from '/public/images/companies/techave-dev.jpeg'
+import AngkasaPura1Logo from '/public/images/companies/angkasa-pura-1.jpeg'
 
 import {
     TechStack,
@@ -189,9 +192,37 @@ export const experiences: Experience[] = [
         currentlyWorkHere: false,
         endDate: new Date(2021, 10),
         summary: [
-            'Take part as a cameraman and video editor.',
+            'Work as a cameraman and video editor.',
             'Documenting photos and videos during the event.',
-            'The studio mostly documenting chinese indonesians wedding and engagement style, also a lot of pre-wedding concept.'
+            'The studio mostly documenting Chinese-Indonesians wedding and engagement style, also a lot of prewedding concept.'
+        ],
+    },
+    {
+        logo: TechaveDevLogo,
+        darkModeLogo: TechaveDevLogo,
+        logoAlt: 'Techave Dev logo',
+        name: 'Techave Dev',
+        position: 'Front-End Developer Support',
+        startDate: new Date(2023, 3),
+        currentlyWorkHere: false,
+        endDate: new Date(2023, 3),
+        summary: [
+            'Act as additional support for the Front-End Developer in the web application development project for one of the state-owned companies.',
+        ],
+    },
+    {
+        logo: AngkasaPura1Logo,
+        darkModeLogo: AngkasaPura1Logo,
+        logoAlt: 'Angkasa Pura 1 logo',
+        name: 'PT. Angkasa Pura I, Yogyakarta International Airport',
+        position: 'Internship Student at Airport Quality Management Unit',
+        startDate: new Date(2023, 6),
+        currentlyWorkHere: false,
+        endDate: new Date(2023, 8),
+        summary: [
+            'Create frameworks and workflows and internship reports.',
+            'Assist the Unit Manager and Staff in dealing with problems in the field, such as accompanying during audit activities and assisting during internal meetings.',
+            'Build a lost and found website as an innovation product requested by the company.'
         ],
     },
 ]
@@ -228,7 +259,7 @@ export const projects: Project[] = [
         description:
             'data display playground from valorant-api.com',
         url: 'https://valorant101.vercel.app',
-        previewImage: Valorant101,
+        previewImage: Valorant101Preview,
         techStacks: [
             'Next.js',
             'TypeScript',

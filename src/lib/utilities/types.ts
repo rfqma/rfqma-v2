@@ -15,7 +15,7 @@ export type Experience = {
     position: string
     currentlyWorkHere?: boolean
     startDate: Date
-    endDate?: Date
+    endDate?: Date | null
     summary: string[]
 }
 
