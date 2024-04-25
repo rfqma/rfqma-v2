@@ -16,7 +16,7 @@ import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import Social from '@/components/Socials'
 import { externalLinks } from '@/lib/utilities/data'
 
-export default function Hero() {
+export default function Hero({props}: {props: any}) {
     const iconColor = useColorModeValue('gray.600', 'gray.400')
     const textColor = useColorModeValue('gray.600', 'gray.300')
     const titleColor = useColorModeValue('gray.900', 'gray.300')
@@ -54,15 +54,15 @@ export default function Hero() {
                             color={titleColor}
                             fontSize={'3rem'}
                         >
-                            Hi, I&apos;m Rifqi
+                            {props[1].title}
                         </Text>
                         <Text
                             fontWeight={'normal'}
                             color={textColor}
                             fontSize={'0.9rem'}
+                            className='whitespace-pre-line'
                         >
-                            I&apos;m a 21yo Minimalist, Photography and Videography Enthusiast. <br />
-                            Undergraduate student majoring on Informatics.
+                            {props[1].description}
                         </Text>
                     </Flex>
                     <Flex
@@ -121,8 +121,8 @@ export default function Hero() {
                     <Image
                         borderRadius={'full'}
                         boxSize={'160px'}
-                        src={'/images/rifqimaulana-memoji.png'}
-                        alt={'rifqimaulana-memoji.png'}
+                        src={props[1].image}
+                        alt={props[1].image}
                         position={'absolute'}
                         top={'-75px'}
                     />
@@ -222,8 +222,8 @@ export default function Hero() {
                     <Image
                         borderRadius={'full'}
                         boxSize={'160px'}
-                        src={'/images/rifqimaulana-memoji.png'}
-                        alt={'rifqimaulana-memoji.png'}
+                        src={props[1].image}
+                        alt={props[1].image}
                         position={'absolute'}
                         top={'-75px'}
                     />
@@ -318,15 +318,15 @@ export default function Hero() {
                             color={titleColor}
                             fontSize={'2.5rem'}
                         >
-                            Hi, I&apos;m Rifqi
+                            {props[1].title}
                         </Text>
                         <Text
                             fontWeight={'normal'}
                             color={textColor}
                             fontSize={'0.9rem'}
+                            className='whitespace-pre-line'
                         >
-                            I&apos;m a 21yo Minimalist, Photography and Videography Enthusiast. <br />
-                            Undergraduate student majoring on Informatics.
+                            {props[1].description}
                         </Text>
                     </Flex>
                     <Flex

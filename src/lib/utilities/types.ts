@@ -7,26 +7,6 @@ export type TechStack = {
     url: string
 }
 
-export type Experience = {
-    logo: string | StaticImageData
-    darkModeLogo?: string | StaticImageData
-    logoAlt: string
-    name: string
-    position: string
-    currentlyWorkHere?: boolean
-    startDate: Date
-    endDate?: Date | null
-    summary: string[]
-}
-
-export type Project = {
-    name: string
-    description: string
-    url: string
-    previewImage: string | StaticImageData
-    techStacks: string[]
-}
-
 export type HeaderMenuItem = {
     label: string
     href: string
@@ -37,4 +17,27 @@ export type ExternalLink = {
     EMAIL: string
     MAILTO: string
     MAP: string
+}
+
+export type ExperienceProps = {
+    id: number,
+    title: string,
+    company_name: string,
+    company_logo: string,
+    end_date: string,
+    start_date: string,
+    description: string,
+    created_at: string,
+    updated_at: string,
+}
+
+export type ProjectProps = {
+    id: number,
+    description: string,
+    created_at: string,
+    updated_at: string,
+    name: string,
+    url: string,
+    thumbnail: string,
+    tech_stacks: [string]
 }

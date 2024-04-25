@@ -21,6 +21,9 @@ import { SunIcon, MoonIcon, HamburgerIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
 import { useState } from 'react'
 import { headerMenuItems } from '@/lib/utilities/data'
+import maruarchiveLogo from '/public/images/logos/maruarchive-logo.png'
+import maruarchiveLogoDark from '/public/images/logos/maruarchive-logo-dark.png'
+import Image from 'next/image'
 
 export default function Header() {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -58,7 +61,22 @@ export default function Header() {
                             letterSpacing={'tighter'}
                             color={iconColor}
                         >
-                            Rifqi Maulana
+                            {
+                            colorMode === 'light' ? 
+                            <Image 
+                            src={maruarchiveLogo}
+                            alt={'Maru Archive Logo'}
+                            width={60}
+                            height={60}
+                            />
+                            :
+                            <Image 
+                            src={maruarchiveLogoDark}
+                            alt={'Maru Archive Logo Dark'}
+                            width={60}
+                            height={60}
+                            />
+                        }
                         </Text>
                     </Link>
 
@@ -127,7 +145,22 @@ export default function Header() {
                             letterSpacing={'tighter'}
                             color={iconColor}
                         >
-                            Rifqi Maulana
+                            {
+                            colorMode === 'light' ? 
+                            <Image 
+                            src={maruarchiveLogo}
+                            alt={'Maru Archive Logo'}
+                            width={60}
+                            height={60}
+                            />
+                            :
+                            <Image 
+                            src={maruarchiveLogoDark}
+                            alt={'Maru Archive Logo Dark'}
+                            width={60}
+                            height={60}
+                            />
+                        }
                         </Text>
                     </Link>
 

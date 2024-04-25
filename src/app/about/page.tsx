@@ -2,6 +2,7 @@ import { Container } from '@chakra-ui/react'
 import Hero from '@/components/About/Hero'
 import Experience from '@/components/About/Experience'
 import type { Metadata } from 'next'
+import { createClient } from '@/lib/supabase/server'
 
 export const metadata: Metadata = {
     title: 'About',
@@ -10,7 +11,11 @@ export const metadata: Metadata = {
     }
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+    const supabase = createClient();
+    const { data: experiences } = await supabase.from("experiences").select();
+    const {data: summaries} = await supabase.from("summaries").select();
+
     return (
         <>
             <Container
@@ -24,8 +29,8 @@ export default function HomePage() {
                     maxW={1200}
                     py={'20'}
                 >
-                    <Hero />
-                    <Experience />
+                    <Hero props={summaries}/>
+                    <Experience props={experiences}/>
                 </Container>
             </Container >
         </>

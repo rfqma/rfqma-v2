@@ -1,5 +1,6 @@
 'use client'
 
+import { ProjectProps } from '@/lib/utilities/types'
 import {
     Container,
     Flex,
@@ -11,11 +12,10 @@ import {
     Icon,
     useMediaQuery
 } from '@chakra-ui/react'
-import { projects } from '@/lib/utilities/data';
-import { StaticImageData } from 'next/image';
+import { Key } from 'react'
 import { BiLinkExternal } from 'react-icons/bi'
 
-export default function Works() {
+export default function Works({props}: {props: any}) {
     const bg = useColorModeValue('white', 'gray.950')
     const cardPrimaryTextColor = useColorModeValue('gray.600', 'gray.300')
     const textColor = useColorModeValue('gray.600', 'gray.300')
@@ -26,10 +26,6 @@ export default function Works() {
     const tagTextColor = useColorModeValue('gray.900', 'gray.200')
     const imageBgColor = useColorModeValue('gray.100', 'gray.700')
     const [isLargerThan768] = useMediaQuery("(min-width: 768px)")
-
-    const staticImageToDataURL = (image: StaticImageData): string => {
-        return image.src || ''
-    }
 
     const desktopLayout = (
         <Container
@@ -65,9 +61,7 @@ export default function Works() {
                     gap={10}
                 >
                     {
-                        projects.map((work, index) => {
-                            const workPreviewImage = work.previewImage
-
+                        props.map((prop: ProjectProps, index: Key | null | undefined) => {
                             return (
                                 <>
                                     <Box
@@ -85,14 +79,10 @@ export default function Works() {
                                                 p={8}
                                                 borderLeftRadius={'2xl'}
                                             >
-                                                <Link href={work.url}>
+                                                <Link href={prop.url}>
                                                     <Image
-                                                        src={
-                                                            typeof workPreviewImage === 'string'
-                                                                ? workPreviewImage
-                                                                : staticImageToDataURL(workPreviewImage as StaticImageData)
-                                                        }
-                                                        alt={`${work.name} preview image`}
+                                                        src={prop.thumbnail}
+                                                        alt={`${prop.name} thumbnail`}
                                                         w={500}
                                                         h={300}
                                                         borderRadius={'2xl'}
@@ -115,14 +105,14 @@ export default function Works() {
                                                     color={cardTitleColor}
                                                     fontSize={'1.2rem'}
                                                 >
-                                                    {work.name}
+                                                    {prop.name}
                                                 </Text>
                                                 <Text
                                                     fontWeight={'medium'}
                                                     color={cardPrimaryTextColor}
                                                     fontSize={'1rem'}
                                                 >
-                                                    {work.description}
+                                                    {prop.description}
                                                 </Text>
                                                 <Flex
                                                     gap={2}
@@ -130,7 +120,7 @@ export default function Works() {
                                                     maxW={'md'}
                                                 >
                                                     {
-                                                        work.techStacks.map((technology, index) => {
+                                                        prop.tech_stacks.map((stack, index) => {
                                                             return (
                                                                 <>
                                                                     <Box
@@ -147,7 +137,7 @@ export default function Works() {
                                                                             color={tagTextColor}
                                                                             fontSize={'0.9rem'}
                                                                         >
-                                                                            {technology}
+                                                                            {stack}
                                                                         </Text>
                                                                     </Box>
                                                                 </>
@@ -156,7 +146,7 @@ export default function Works() {
                                                     }
                                                 </Flex>
                                                 <Link
-                                                    href={work.url}
+                                                    href={prop.url}
                                                     alignSelf={'flex-start'}
                                                     borderRadius={'lg'}
                                                     _hover={{ bg: tagHoverBgColor }}
@@ -205,9 +195,7 @@ export default function Works() {
                 gap={10}
             >
                 {
-                    projects.map((work, index) => {
-                        const workPreviewImage = work.previewImage
-
+                    props.map((prop: ProjectProps, index: Key | null | undefined) => {
                         return (
                             <>
                                 <Box
@@ -226,14 +214,10 @@ export default function Works() {
                                             p={6}
                                             borderTopRadius={'2xl'}
                                         >
-                                            <Link href={work.url}>
+                                            <Link href={prop.url}>
                                                 <Image
-                                                    src={
-                                                        typeof workPreviewImage === 'string'
-                                                            ? workPreviewImage
-                                                            : staticImageToDataURL(workPreviewImage as StaticImageData)
-                                                    }
-                                                    alt={`${work.name} preview image`}
+                                                    src={prop.thumbnail}
+                                                    alt={`${prop.name} thumbnail`}
                                                     w={'full'}
                                                     h={'auto'}
                                                     borderRadius={'2xl'}
@@ -256,14 +240,14 @@ export default function Works() {
                                                 color={cardTitleColor}
                                                 fontSize={'1rem'}
                                             >
-                                                {work.name}
+                                                {prop.name}
                                             </Text>
                                             <Text
                                                 fontWeight={'medium'}
                                                 color={cardPrimaryTextColor}
                                                 fontSize={'0.9rem'}
                                             >
-                                                {work.description}
+                                                {prop.description}
                                             </Text>
                                             <Flex
                                                 gap={2}
@@ -271,7 +255,7 @@ export default function Works() {
                                                 maxW={'md'}
                                             >
                                                 {
-                                                    work.techStacks.map((technology, index) => {
+                                                    prop.tech_stacks.map((stack, index) => {
                                                         return (
                                                             <>
                                                                 <Box
@@ -288,7 +272,7 @@ export default function Works() {
                                                                         color={tagTextColor}
                                                                         fontSize={'0.7rem'}
                                                                     >
-                                                                        {technology}
+                                                                        {stack}
                                                                     </Text>
                                                                 </Box>
                                                             </>
@@ -297,7 +281,7 @@ export default function Works() {
                                                 }
                                             </Flex>
                                             <Link
-                                                href={work.url}
+                                                href={prop.url}
                                                 alignSelf={'flex-start'}
                                                 borderRadius={'lg'}
                                                 _hover={{ bg: tagHoverBgColor }}

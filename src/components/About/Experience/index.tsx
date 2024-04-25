@@ -7,32 +7,22 @@ import {
     Text,
     Image,
     useColorModeValue,
-    useColorMode,
-    UnorderedList,
+    useMediaQuery,
     ListItem,
-    useMediaQuery
+    UnorderedList
 } from '@chakra-ui/react'
-import { experiences } from "@/lib/utilities/data"
-import { StaticImageData } from 'next/image';
+import {formatDate}  from '@/lib/helpers/formatDate'
+import { ExperienceProps } from '@/lib/utilities/types';
+import { Key } from 'react';
 
-export default function Experience() {
+export default function Experience({props}: {props: any}) {
     const bg = useColorModeValue('white', 'gray.950')
     const cardPrimaryTextColor = useColorModeValue('gray.600', 'gray.300')
     const textColor = useColorModeValue('gray.600', 'gray.300')
     const cardTitleTextColor = useColorModeValue('gray.900', 'gray.300')
     const cardBgColor = useColorModeValue('white', 'gray.800')
     const cardSecondaryTextColor = useColorModeValue('gray.600', 'gray.400')
-    const { colorMode } = useColorMode()
     const [isLargerThan768] = useMediaQuery("(min-width: 768px)")
-
-    const staticImageToDataURL = (image: StaticImageData): string => {
-        return image.src || ''
-    }
-
-    const dateFormatOptions: Intl.DateTimeFormatOptions = {
-        year: 'numeric',
-        month: 'short'
-    }
 
     const desktopLayout = (
         <Container
@@ -67,11 +57,7 @@ export default function Experience() {
                     pt={10}
                 >
                     {
-                        experiences.map((experience, index) => {
-                            const logoCondition =
-                                colorMode === 'light' ? experience.logo : experience.darkModeLogo
-                            const experienceLogo = logoCondition
-
+                        props.map((prop: ExperienceProps, index: Key | null | undefined) => {
                             return (
                                 <Box
                                     key={index}
@@ -90,12 +76,8 @@ export default function Experience() {
                                             flexDirection={'column'}
                                         >
                                             <Image
-                                                src={
-                                                    typeof experienceLogo === 'string'
-                                                        ? experienceLogo
-                                                        : staticImageToDataURL(experienceLogo as StaticImageData)
-                                                }
-                                                alt={experience.logoAlt}
+                                                src={prop.company_logo}
+                                                alt={prop.company_logo}
                                                 verticalAlign={'top'}
                                                 maxWidth={45}
                                             />
@@ -115,7 +97,7 @@ export default function Experience() {
                                                     color={cardTitleTextColor}
                                                     fontSize={'1.2rem'}
                                                 >
-                                                    {experience.position}
+                                                    {prop.title}
                                                 </Text>
                                                 <Flex
                                                     gap={1}
@@ -132,7 +114,7 @@ export default function Experience() {
                                                         fontSize={'0.9rem'}
                                                         fontWeight={'normal'}
                                                     >
-                                                        {experience.name}
+                                                        {prop.company_name}
                                                     </Text>
                                                 </Flex>
                                             </Flex>
@@ -140,8 +122,8 @@ export default function Experience() {
                                                 flexDirection={'column'}
                                                 gap={2}
                                             >
-                                                {
-                                                    experience.summary.map((summary, index) => {
+                                                 {
+                                                    prop.description.split('\n\n').map((item, index) => {
                                                         return (
                                                             <>
                                                                 <UnorderedList>
@@ -153,7 +135,7 @@ export default function Experience() {
                                                                             color={cardPrimaryTextColor}
                                                                             fontSize={'0.9rem'}
                                                                         >
-                                                                            {summary}
+                                                                            {item}
                                                                         </Text>
                                                                     </ListItem>
                                                                 </UnorderedList>
@@ -169,20 +151,11 @@ export default function Experience() {
                                                 fontSize={'0.8rem'}
                                                 fontWeight={'normal'}
                                             >
-                                                {
-                                                    new Intl.DateTimeFormat('en-US', dateFormatOptions)
-                                                        .format(experience.startDate)
-                                                }
+                                                {formatDate(prop.start_date)}
                                                 {' '}
                                                 {'-'}
                                                 {' '}
-                                                {
-                                                    experience.currentlyWorkHere
-                                                        ? 'Present'
-                                                        : experience.endDate ?
-                                                            new Intl.DateTimeFormat('en-US', dateFormatOptions).format(experience.endDate)
-                                                            : 'NA'
-                                                }
+                                                {formatDate(prop.end_date)}
                                             </Text>
                                         </Flex>
                                     </Flex>
@@ -222,11 +195,7 @@ export default function Experience() {
                 gap={10}
             >
                 {
-                    experiences.map((experience, index) => {
-                        const logoCondition =
-                            colorMode === 'light' ? experience.logo : experience.darkModeLogo
-                        const experienceLogo = logoCondition
-
+                    props.map((prop: ExperienceProps, index: Key | null | undefined) => {
                         return (
                             <Box
                                 key={index}
@@ -240,12 +209,8 @@ export default function Experience() {
                                     gap={5}
                                 >
                                     <Image
-                                        src={
-                                            typeof experienceLogo === 'string'
-                                                ? experienceLogo
-                                                : staticImageToDataURL(experienceLogo as StaticImageData)
-                                        }
-                                        alt={experience.logoAlt}
+                                        src={prop.company_logo}
+                                        alt={prop.company_logo}
                                         verticalAlign={'top'}
                                         maxWidth={45}
                                     />
@@ -263,7 +228,7 @@ export default function Experience() {
                                                 color={cardTitleTextColor}
                                                 fontSize={'1.1rem'}
                                             >
-                                                {experience.position}
+                                                {prop.title}
                                             </Text>
                                             <Flex
                                                 gap={1}
@@ -280,7 +245,7 @@ export default function Experience() {
                                                     fontSize={'0.9rem'}
                                                     fontWeight={'normal'}
                                                 >
-                                                    {experience.name}
+                                                    {prop.company_name}
                                                 </Text>
                                             </Flex>
                                             <Flex>
@@ -289,20 +254,11 @@ export default function Experience() {
                                                     fontSize={'0.7rem'}
                                                     fontWeight={'normal'}
                                                 >
-                                                    {
-                                                        new Intl.DateTimeFormat('en-US', dateFormatOptions)
-                                                            .format(experience.startDate)
-                                                    }
+                                                    {formatDate(prop.start_date)}
                                                     {' '}
                                                     {'-'}
                                                     {' '}
-                                                    {
-                                                        experience.currentlyWorkHere
-                                                            ? 'Present'
-                                                            : experience.endDate ?
-                                                                new Intl.DateTimeFormat('en-US', dateFormatOptions).format(experience.endDate)
-                                                                : 'NA'
-                                                    }
+                                                    {formatDate(prop.end_date)}
                                                 </Text>
                                             </Flex>
                                         </Flex>
@@ -311,26 +267,26 @@ export default function Experience() {
                                             gap={2}
                                         >
                                             {
-                                                experience.summary.map((summary, index) => {
-                                                    return (
-                                                        <>
-                                                            <UnorderedList>
-                                                                <ListItem
-                                                                    key={index}
-                                                                >
-                                                                    <Text
-                                                                        fontWeight={'normal'}
-                                                                        color={cardPrimaryTextColor}
-                                                                        fontSize={'0.9rem'}
+                                                    prop.description.split('\n\n').map((item, index) => {
+                                                        return (
+                                                            <>
+                                                                <UnorderedList>
+                                                                    <ListItem
+                                                                        key={index}
                                                                     >
-                                                                        {summary}
-                                                                    </Text>
-                                                                </ListItem>
-                                                            </UnorderedList>
-                                                        </>
-                                                    )
-                                                })
-                                            }
+                                                                        <Text
+                                                                            fontWeight={'normal'}
+                                                                            color={cardPrimaryTextColor}
+                                                                            fontSize={'0.9rem'}
+                                                                        >
+                                                                            {item}
+                                                                        </Text>
+                                                                    </ListItem>
+                                                                </UnorderedList>
+                                                            </>
+                                                        )
+                                                    })
+                                                }
                                         </Flex>
                                     </Flex>
                                 </Flex>

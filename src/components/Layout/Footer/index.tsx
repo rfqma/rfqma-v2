@@ -21,7 +21,7 @@ export default function Footer() {
             bg={bg}
             w={'100%'}
             maxW={'unset'}
-            position={'fixed'}
+            
             left={0}
             bottom={0}
             zIndex={2}

@@ -1,8 +1,12 @@
 import { Container } from '@chakra-ui/react'
 import Hero from '@/components/Home/Hero'
 import Tech from '@/components/Home/Tech'
+import { createClient } from '@/lib/supabase/server'
 
-export default function HomePage() {
+export default async function HomePage() {
+  const supabase = createClient();
+  const {data: summaries} = await supabase.from("summaries").select();
+
   return (
     <>
       <Container
@@ -16,7 +20,7 @@ export default function HomePage() {
           maxW={1200}
           py={40}
         >
-          <Hero />
+          <Hero props={summaries}/>
           <Tech />
         </Container>
       </Container >

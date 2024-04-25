@@ -9,7 +9,7 @@ import {
     useMediaQuery
 } from '@chakra-ui/react'
 
-export default function Hero() {
+export default function Hero({props}: {props: any}) {
     const textColor = useColorModeValue('gray.600', 'gray.300')
     const titleColor = useColorModeValue('gray.900', 'gray.300')
     const cardBgColor = useColorModeValue('white', 'gray.800')
@@ -38,8 +38,8 @@ export default function Hero() {
                     <Image
                         borderRadius={'3xl'}
                         boxSize={'300px'}
-                        src={'/images/rifqimaulana-headshot.png'}
-                        alt={'rifqimaulana-headshot.png'}
+                        src={props[0].image}
+                        alt={props[0].image}
                         position={'absolute'}
                         top={'-20px'}
                         right={'-20px'}
@@ -67,7 +67,7 @@ export default function Hero() {
                                 color={titleColor}
                                 fontSize={'2.5rem'}
                             >
-                                Curious about me?
+                                {props[0].title}
                             </Text>
                         </Flex>
                         <Flex
@@ -78,28 +78,9 @@ export default function Hero() {
                                 fontWeight={'normal'}
                                 color={textColor}
                                 fontSize={'0.9rem'}
+                                className='whitespace-pre-line'
                             >
-                                I&apos;m a 21 years old who passionate about photography, videography, and computer related stuff.
-                                I am an ambitious student pursuing a degree on informatics at Universitas Pembangunan Nasional Veteran Yogyakarta.
-                            </Text>
-                            <Text
-                                fontWeight={'normal'}
-                                color={textColor}
-                                fontSize={'0.9rem'}
-                            >
-                                Alongside my studies, I actively engage in freelance work,
-                                utilizing my skills and creativity to capture unforgettable moments through photography and videography.
-                                With a strong technical background and a deep appreciation for visual storytelling,
-                                I bring a unique blend of expertise to every project.
-                            </Text>
-                            <Text
-                                fontWeight={'normal'}
-                                color={textColor}
-                                fontSize={'0.9rem'}
-                            >
-                                Combining my passion for technology and the arts,
-                                I am dedicated to delivering exceptional visual content that resonates with audiences.
-                                Let&apos;s connect and explore the power of visuals together.
+                                {props[0].description}
                             </Text>
                         </Flex>
                     </Flex>
@@ -133,8 +114,8 @@ export default function Hero() {
                     <Image
                         borderRadius={'3xl'}
                         boxSize={'250px'}
-                        src={'/images/rifqimaulana-headshot.png'}
-                        alt={'rifqimaulana-headshot.png'}
+                        src={props[0].image}
+                        alt={props[0].image}
                         position={'absolute'}
                         top={'-10px'}
                     />
@@ -161,7 +142,7 @@ export default function Hero() {
                                 color={titleColor}
                                 fontSize={'1.4rem'}
                             >
-                                Curious about me?
+                                {props[0].title}
                             </Text>
                         </Flex>
                         <Flex
@@ -172,28 +153,9 @@ export default function Hero() {
                                 fontWeight={'normal'}
                                 color={textColor}
                                 fontSize={'0.9rem'}
+                                className='whitespace-pre-line'
                             >
-                                I&apos;m a 20 years old who passionate about photography, videography, and computer related stuff.
-                                I am an ambitious student pursuing a degree in informatics at Universitas Pembangunan Nasional Veteran Yogyakarta.
-                            </Text>
-                            <Text
-                                fontWeight={'normal'}
-                                color={textColor}
-                                fontSize={'0.9rem'}
-                            >
-                                Alongside my studies, I actively engage in freelance work,
-                                utilizing my skills and creativity to capture unforgettable moments through photography and videography.
-                                With a strong technical background and a deep appreciation for visual storytelling,
-                                I bring a unique blend of expertise to every project.
-                            </Text>
-                            <Text
-                                fontWeight={'normal'}
-                                color={textColor}
-                                fontSize={'0.9rem'}
-                            >
-                                Combining my passion for technology and the arts,
-                                I am dedicated to delivering exceptional visual content that resonates with audiences.
-                                Let&apos;s connect and explore the power of visuals together.
+                                {props[0].description}
                             </Text>
                         </Flex>
                     </Flex>
