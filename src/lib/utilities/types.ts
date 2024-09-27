@@ -1,43 +1,39 @@
 import type { StaticImageData } from "next/image";
 
 export type TechStack = {
-    logo?: string | StaticImageData
-    darkModeLogo?: string | StaticImageData
-    label: string
-    url: string
-}
+  logo?: string | StaticImageData;
+  darkModeLogo?: string | StaticImageData;
+  label: string;
+  url: string;
+};
 
 export type HeaderMenuItem = {
-    label: string
-    href: string
-}
+  label: string;
+  href: string;
+};
 
 export type ExternalLink = {
-    CV: string
-    EMAIL: string
-    MAILTO: string
-    MAP: string
-}
+  CV: string;
+  EMAIL: string;
+  MAILTO: string;
+  MAP: string;
+};
 
 export type ExperienceProps = {
-    id: number,
-    title: string,
-    company_name: string,
-    company_logo: string,
-    end_date: string,
-    start_date: string,
-    description: string,
-    created_at: string,
-    updated_at: string,
-}
+  id: number;
+  title: string;
+  company_name: string;
+  company_logo: string;
+  end_date: string;
+  start_date: string;
+  description: string;
+};
 
 export type ProjectProps = {
-    id: number,
-    description: string,
-    created_at: string,
-    updated_at: string,
-    name: string,
-    url: string,
-    thumbnail: string,
-    tech_stacks: [string]
-}
+  id: number;
+  description: string;
+  name: string;
+  url: string;
+  thumbnail: string;
+  tech_stacks: [string];
+};
